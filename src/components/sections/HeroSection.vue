@@ -44,12 +44,15 @@ const scrollToProjects = () => {
 <style scoped>
 .hero-section {
   position: relative;
+
   min-height: 100vh;
 
   display: flex;
   align-items: center;
 
-  padding: 0 8vw;
+  padding:
+    clamp(6rem, 10vh, 12rem)
+    clamp(6vw, 8vw, 12vw);
 
   overflow: hidden;
 }
@@ -59,78 +62,165 @@ const scrollToProjects = () => {
   inset: 0;
 
   background:
-    radial-gradient(circle at top right, rgba(0, 255, 170, 0.15), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(0, 150, 255, 0.12), transparent 25%);
+    radial-gradient(
+      circle at top right,
+      rgba(0, 255, 170, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(0, 150, 255, 0.12),
+      transparent 25%
+    );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
 
-  max-width: 700px;
+  width: 85vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2vw, 4vw);
 }
 
 .hero-label {
-  margin-bottom: 1rem;
+  letter-spacing: 0.35em;
 
-  letter-spacing: 0.25rem;
-  font-size: 0.85rem;
+  font-size: clamp(0.8rem, 2.2vw, 6.6vh);
+
   color: #7c7c7c;
 }
 
 h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 0.95;
+  max-width: 60vw;
+
+  font-size: clamp(3.5rem, 7vw, 13.2vh);
+
+  line-height: 0.9;
+
   font-weight: 800;
 
-  margin-bottom: 2rem;
+  text-wrap: balance;
 }
 
 .hero-description {
-  max-width: 550px;
+  max-width: 38ch;
 
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: clamp(0.8rem, 1.5vw, 4vh);
+
+  line-height: 1.8;
 
   color: #a0a0a0;
-
-  margin-bottom: 2.5rem;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  gap: clamp(1rem, 2vw, 4vh);
 }
 
 .primary-button {
   border: none;
+
   cursor: pointer;
 
-  padding: 1rem 1.6rem;
+  padding:
+    clamp(0.9rem, 1vw, 2vh)
+    clamp(1.4rem, 2vw, 4vh);
 
-  border-radius: 12px;
+  border-radius: clamp(0.8rem, 1vw, 2vh);
 
   background: white;
   color: black;
 
+  font-size: clamp(0.95rem, 1.5vw, 4vh);
+
   font-weight: 700;
 
-  transition: 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .primary-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.15rem);
+
+  opacity: 0.9;
 }
 
 a {
   color: white;
+
   text-decoration: none;
 
+  font-size: clamp(1rem, 1.5vw, 4vh);
+
   opacity: 0.7;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 a:hover {
   opacity: 1;
+
+  transform: translateY(-0.1rem);
+}
+
+/* Tablet */
+@media (max-width: 64rem) {
+  .hero-section {
+    padding:
+      8rem
+      8vw;
+  }
+
+  h1 {
+    max-width: 12ch;
+  }
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  .hero-section {
+    align-items: center;
+
+    padding:
+      7rem
+      8vw;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  h1 {
+    max-width: 100%;
+
+    font-size: clamp(3rem, 14vw, 5rem);
+
+    line-height: 0.95;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 30rem) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
 }
 </style>
