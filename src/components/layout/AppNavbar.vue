@@ -48,8 +48,8 @@ const links = [
 
 <style lang="css" scoped>
 .navbar {
-  position: fixed;
-  inset: 0 0 auto 0;
+  position: sticky;
+  top: 0;
 
   width: 100%;
 

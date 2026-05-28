@@ -7,14 +7,6 @@ import AppNavbar from '@/components/layout/AppNavbar.vue'
   <div class="app">
     <AppNavbar />
 
-    <main class="page-content">
-      <RouterView />
-    </main>
+    <RouterView />
   </div>
 </template>
-
-<style scoped>
-.page-content {
-  padding-top: 80px;
-}
-</style>
