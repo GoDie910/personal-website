@@ -65,9 +65,6 @@ const links = [
 }
 
 .navbar-container {
-
-  margin: 0 5vw;
-
   padding:
     clamp(1rem, 1.2vw, 1.8rem)
     clamp(1.5rem, 3vw, 4rem);
@@ -78,7 +75,7 @@ const links = [
 }
 
 .logo {
-  font-size: clamp(1.2rem, 7.5vh, 2vw);
+  font-size: clamp(1.2rem, 1.25vw, 6.6vh);
 
   font-weight: 800;
 
@@ -113,7 +110,7 @@ const links = [
 
   text-decoration: none;
 
-  font-size: clamp(1rem, 7.5vh, 2vw);
+  font-size: clamp(1rem, 1.25vw, 6.6vh);
 
   font-weight: 500;
 
@@ -151,9 +148,6 @@ const links = [
 
 /* Tablet */
 @media (max-width: 64rem) {
-  .navbar-container {
-    width: min(92vw, 90rem);
-  }
 
   .nav-links {
     gap: 1.5rem;
