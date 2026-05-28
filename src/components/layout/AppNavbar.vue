@@ -29,7 +29,7 @@ const links = [
         to="/"
         class="logo"
       >
-        YA
+        DBA
       </RouterLink>
 
       <nav class="nav-links">
