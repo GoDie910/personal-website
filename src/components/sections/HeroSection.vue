@@ -12,8 +12,6 @@ const scrollToProjects = () => {
 
 <template>
   <section class="hero-section">
-    <div class="hero-background"></div>
-
     <div class="hero-content">
       <p class="hero-label">SOFTWARE ENGINEER</p>
 
@@ -46,20 +44,15 @@ const scrollToProjects = () => {
   position: relative;
 
   min-height: 100vh;
+  width: 100%;
 
   display: flex;
-  align-items: center;
 
-  padding:
-    clamp(6rem, 10vh, 12rem)
-    clamp(6vw, 8vw, 12vw);
+  padding: 0;
+  padding-left: 10vw;
+  padding-top: 5vh;
 
   overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  inset: 0;
 
   background:
     radial-gradient(
@@ -82,7 +75,7 @@ const scrollToProjects = () => {
 
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 2vw, 4vw);
+  gap: clamp(1rem, 1.5vw, 3vw);
 }
 
 .hero-label {
@@ -96,7 +89,7 @@ const scrollToProjects = () => {
 h1 {
   max-width: 60vw;
 
-  font-size: clamp(3.5rem, 7vw, 13.2vh);
+  font-size: clamp(3.5rem, 5vw, 10vh);
 
   line-height: 0.9;
 
@@ -174,12 +167,6 @@ a:hover {
 
 /* Tablet */
 @media (max-width: 64rem) {
-  .hero-section {
-    padding:
-      8rem
-      8vw;
-  }
-
   h1 {
     max-width: 12ch;
   }
@@ -188,11 +175,9 @@ a:hover {
 /* Mobile */
 @media (max-width: 48rem) {
   .hero-section {
-    align-items: center;
 
-    padding:
-      7rem
-      8vw;
+    padding: 0 5vw;
+    padding-top: 5vh;
   }
 
   .hero-content {
