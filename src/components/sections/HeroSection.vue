@@ -31,7 +31,7 @@ const scrollToProjects = () => {
           View Projects
         </button>
 
-        <a href="https://github.com/" target="_blank" rel="noopener">
+        <a class="github-cta" href="https://github.com/GoDie910" target="_blank" rel="noopener">
           GitHub
         </a>
       </div>
@@ -206,6 +206,10 @@ a:hover {
 
   .primary-button {
     width: 100%;
+  }
+
+  a {
+    text-align: center;
   }
 }
 </style>
