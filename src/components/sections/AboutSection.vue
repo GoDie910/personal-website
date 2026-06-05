@@ -91,23 +91,6 @@ h2 {
   text-wrap: balance;
 }
 
-.about-content {
-  display: flex;
-  flex-direction: column;
-
-  gap: clamp(1.5rem, 2vw, 3rem);
-
-  max-width: 70ch;
-}
-
-.about-content p {
-  color: #a0a0a0;
-
-  line-height: 1.9;
-
-  font-size: clamp(1rem, 1.1vw, 1.35rem);
-}
-
 .about-list {
   display: flex;
   flex-direction: column;
@@ -150,10 +133,6 @@ h2 {
   }
 
   h2 {
-    max-width: 100%;
-  }
-
-  .about-content {
     max-width: 100%;
   }
 }
