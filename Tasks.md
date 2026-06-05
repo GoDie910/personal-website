@@ -1,5 +1,9 @@
 # Personal Website — Tasks
 
+## Bugs
+
+- you go to a page -> you scroll down -> you go to another page, you start already scrolled down. you should start at the top.
+
 ## Responsive Design
 
 - Make every landing page section fully responsive across all screen sizes
@@ -16,15 +20,6 @@
 - Ensure layouts do not break on extreme resolutions
 
 ## Skills Section
-
-- Expand the Skills section to display all technologies and tools
-- Organize skills into categories:
-  - Frontend
-  - Backend
-  - Databases
-  - DevOps
-  - Game Development
-  - Tools / Misc
 
 - Explore interactive UI ideas:
   - Clicking a category opens a radial/wheel menu
