@@ -109,7 +109,7 @@ const skillCategories = [
   width: 100%;
 
   padding:
-    clamp(4rem, 8vh, 12rem)
+    clamp(5rem, 10vh, 10rem)
     clamp(5vw, 8vw, 12vw);
 }
 
@@ -118,9 +118,9 @@ const skillCategories = [
 }
 
 .section-label {
-  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  margin-bottom: 1rem;
 
-  font-size: clamp(0.75rem, 1vw, 1.1rem);
+  font-size: clamp(0.75rem, 1vw, 1rem);
 
   letter-spacing: 0.25em;
 
@@ -130,7 +130,7 @@ const skillCategories = [
 h2 {
   max-width: 16ch;
 
-  font-size: clamp(2.25rem, 5vw, 8vh);
+  font-size: clamp(2.5rem, 5vw, 5rem);
 
   line-height: 1.1;
 
@@ -162,7 +162,7 @@ h2 {
 }
 
 .skill-category:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 
   border-color: rgba(255, 255, 255, 0.18);
 }

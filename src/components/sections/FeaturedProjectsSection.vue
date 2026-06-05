@@ -64,24 +64,33 @@ const projects = [
 
 <style scoped>
 .projects-section {
-  padding: 8rem 8vw;
+  padding:
+    clamp(5rem, 10vh, 10rem)
+    clamp(5vw, 8vw, 12vw);
 }
 
 .section-header {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(3rem, 5vw, 6rem);
 }
 
 .section-label {
   margin-bottom: 1rem;
 
-  font-size: 0.85rem;
-  letter-spacing: 0.2rem;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+
+  letter-spacing: 0.25em;
 
   color: #7c7c7c;
 }
 
 h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  max-width: 16ch;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1.1;
+
+  text-wrap: balance;
 }
 
 .projects-grid {
@@ -96,7 +105,7 @@ h2 {
 
   min-height: 300px;
 
-  border-radius: 24px;
+  border-radius: 1.5rem;
 
   background: rgba(255, 255, 255, 0.03);
 
@@ -149,5 +158,17 @@ h3 {
   background: rgba(255, 255, 255, 0.06);
 
   font-size: 0.9rem;
+}
+
+@media (max-width: 48rem) {
+  .projects-section {
+    padding:
+      clamp(4rem, 8vh, 6rem)
+      5vw;
+  }
+
+  h2 {
+    max-width: 100%;
+  }
 }
 </style>

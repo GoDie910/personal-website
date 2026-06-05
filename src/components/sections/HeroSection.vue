@@ -48,9 +48,9 @@ const scrollToProjects = () => {
 
   display: flex;
 
-  padding: 0;
-  padding-left: 10vw;
-  padding-top: 5vh;
+  padding:
+    clamp(5rem, 10vh, 10rem)
+    clamp(5vw, 8vw, 12vw);
 
   overflow: hidden;
 
@@ -70,9 +70,6 @@ const scrollToProjects = () => {
 .hero-content {
   position: relative;
   z-index: 2;
-
-  width: 85vw;
-
   display: flex;
   flex-direction: column;
   gap: clamp(1rem, 1.5vw, 3vw);
@@ -175,13 +172,26 @@ a:hover {
 /* Mobile */
 @media (max-width: 48rem) {
   .hero-section {
-
-    padding: 0 5vw;
-    padding-top: 5vh;
+    padding:
+      clamp(4rem, 8vh, 6rem)
+      5vw;
   }
 
   .hero-content {
     width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+
+  a {
+    text-align: center;
   }
 
   h1 {
@@ -194,22 +204,6 @@ a:hover {
 
   .hero-description {
     max-width: 100%;
-  }
-}
-
-/* Small Phones */
-@media (max-width: 30rem) {
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .primary-button {
-    width: 100%;
-  }
-
-  a {
-    text-align: center;
   }
 }
 </style>
