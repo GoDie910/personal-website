@@ -1,45 +1,58 @@
-<script setup lang="ts">
-const skills = [
-  'Vue 3',
-  'TypeScript',
-  'Vuetify',
-  'UI Architecture',
-  'Game Systems',
-  'Responsive Design',
-  'Node.js',
-  'PHP',
-]
-</script>
-
 <template>
   <section class="about-section">
     <div class="section-header">
       <p class="section-label">ABOUT</p>
 
-      <h2>Engineering interfaces with personality.</h2>
+      <h2>Building software from interface to deployment.</h2>
     </div>
 
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I enjoy building applications that feel intentional — from admin dashboards and responsive
-          interfaces to experimental game-inspired systems.
-        </p>
+    <div class="about-list">
+      <div class="about-item">
+        <span class="about-icon">✓</span>
 
         <p>
-          My main focus is frontend engineering with Vue 3, but I also explore backend systems,
-          interaction design, and game development.
+          Frontend development with Vue 3, TypeScript, and modern UI architecture.
         </p>
       </div>
 
-      <div class="skills-panel">
-        <div
-          v-for="skill in skills"
-          :key="skill"
-          class="skill-card"
-        >
-          {{ skill }}
-        </div>
+      <div class="about-item">
+        <span class="about-icon">✓</span>
+
+        <p>
+          Backend development with PHP, Node.js, REST APIs, and business systems.
+        </p>
+      </div>
+
+      <div class="about-item">
+        <span class="about-icon">✓</span>
+
+        <p>
+          Database design and maintenance using MySQL and relational data models.
+        </p>
+      </div>
+
+      <div class="about-item">
+        <span class="about-icon">✓</span>
+
+        <p>
+          Responsive interfaces focused on usability, accessibility, and performance.
+        </p>
+      </div>
+
+      <div class="about-item">
+        <span class="about-icon">✓</span>
+
+        <p>
+          Experience building dashboards, administrative tools, and financial platforms.
+        </p>
+      </div>
+
+      <div class="about-item">
+        <span class="about-icon">✓</span>
+
+        <p>
+          Personal projects in game development, systems design, and interactive experiences.
+        </p>
       </div>
     </div>
   </section>
@@ -69,7 +82,7 @@ const skills = [
 }
 
 h2 {
-  max-width: 16ch;
+  max-width: 14ch;
 
   font-size: clamp(2.25rem, 5vw, 8vh);
 
@@ -78,73 +91,57 @@ h2 {
   text-wrap: balance;
 }
 
-.about-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: clamp(2rem, 4vw, 8rem);
-}
-
-.about-text {
+.about-content {
   display: flex;
   flex-direction: column;
 
-  gap: clamp(1rem, 2vw, 3rem);
+  gap: clamp(1.5rem, 2vw, 3rem);
+
+  max-width: 70ch;
 }
 
-.about-text p {
-  max-width: 60ch;
-
+.about-content p {
   color: #a0a0a0;
 
-  line-height: 1.8;
+  line-height: 1.9;
 
   font-size: clamp(1rem, 1.1vw, 1.35rem);
 }
 
-.skills-panel {
-  display: grid;
+.about-list {
+  display: flex;
+  flex-direction: column;
 
-  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 1.5vw, 1.75rem);
 
-  gap: clamp(0.75rem, 1vw, 1.5rem);
+  max-width: 100%;
 }
 
-.skill-card {
-  padding: clamp(1rem, 1.2vw, 1.8rem);
+.about-item {
+  display: flex;
+  align-items: flex-start;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: clamp(0.75rem, 1vw, 1.5rem);
-
-  background: rgba(255, 255, 255, 0.03);
-
-  backdrop-filter: blur(12px);
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  gap: 1rem;
 }
 
-.skill-card:hover {
-  transform: translateY(-0.25rem);
+.about-icon {
+  flex-shrink: 0;
 
-  border-color: rgba(255, 255, 255, 0.18);
+  color: white;
+
+  font-weight: 700;
 }
 
-/* Tablet */
-@media (max-width: 64rem) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+.about-item p {
+  margin: 0;
 
-  h2 {
-    max-width: 12ch;
-  }
+  color: #a0a0a0;
+
+  line-height: 1.7;
+
+  font-size: clamp(1rem, 1.1vw, 1.35rem);
 }
 
-/* Mobile */
 @media (max-width: 48rem) {
   .about-section {
     padding:
@@ -156,8 +153,8 @@ h2 {
     max-width: 100%;
   }
 
-  .skills-panel {
-    grid-template-columns: 1fr;
+  .about-content {
+    max-width: 100%;
   }
 }
 </style>
