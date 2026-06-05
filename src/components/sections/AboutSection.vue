@@ -47,75 +47,116 @@ const skills = [
 
 <style scoped>
 .about-section {
-  padding: 8rem 8vw;
+  width: 100%;
+
+  padding:
+    clamp(4rem, 8vh, 12rem)
+    clamp(5vw, 8vw, 12vw);
 }
 
 .section-header {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 5vw, 6rem);
 }
 
 .section-label {
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
 
-  font-size: 0.85rem;
-  letter-spacing: 0.2rem;
+  font-size: clamp(0.75rem, 1vw, 1.1rem);
+
+  letter-spacing: 0.25em;
 
   color: #7c7c7c;
 }
 
 h2 {
-  max-width: 700px;
+  max-width: 16ch;
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.25rem, 5vw, 8vh);
+
   line-height: 1.1;
+
+  text-wrap: balance;
 }
 
 .about-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+
+  gap: clamp(2rem, 4vw, 8rem);
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+
+  gap: clamp(1rem, 2vw, 3rem);
 }
 
 .about-text p {
+  max-width: 60ch;
+
   color: #a0a0a0;
+
   line-height: 1.8;
-  font-size: 1.05rem;
+
+  font-size: clamp(1rem, 1.1vw, 1.35rem);
 }
 
 .skills-panel {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+
+  gap: clamp(0.75rem, 1vw, 1.5rem);
 }
 
 .skill-card {
-  padding: 1.2rem;
+  padding: clamp(1rem, 1.2vw, 1.8rem);
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  border-radius: 16px;
+  border-radius: clamp(0.75rem, 1vw, 1.5rem);
 
   background: rgba(255, 255, 255, 0.03);
 
   backdrop-filter: blur(12px);
 
-  transition: 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-0.25rem);
 
   border-color: rgba(255, 255, 255, 0.18);
 }
 
-@media (max-width: 900px) {
+/* Tablet */
+@media (max-width: 64rem) {
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    max-width: 12ch;
+  }
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  .about-section {
+    padding:
+      clamp(4rem, 8vh, 6rem)
+      5vw;
+  }
+
+  h2 {
+    max-width: 100%;
+  }
+
+  .skills-panel {
     grid-template-columns: 1fr;
   }
 }
