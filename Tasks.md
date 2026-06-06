@@ -49,15 +49,6 @@
   - Interests / hobbies
   - Download CV button
 
-### ContactView
-
-- Design and develop the Contact page
-- Add:
-  - Contact form
-  - Social links
-  - Email section
-  - Optional animations/interactions
-
 ### ProjectsView
 
 - Design and develop the Projects page
