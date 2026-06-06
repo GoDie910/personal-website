@@ -6,62 +6,110 @@
       <h1>Let's build something together.</h1>
 
       <p class="hero-description">
-        Whether you have a project in mind, a collaboration opportunity,
+        I'm available for frontend development, web applications,
+        game development, and software engineering projects.
+        Whether you're looking for a collaborator, developer,
         or simply want to connect, I'd be happy to hear from you.
+      </p>
+
+      <p class="location">
+        📍 Lima, Peru
       </p>
     </section>
 
     <section class="contact-section">
       <div class="contact-grid">
+
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card resume"
+        >
+          <div class="card-header">
+            <Icon icon="simple-icons:adobeacrobatreader" class="card-icon resume-icon" />
+            <h2>Resume</h2>
+          </div>
+
+          <p>
+            Download my resume to learn more about my professional
+            experience, technical skills, and projects.
+          </p>
+
+          <span class="contact-link">
+            Download CV →
+          </span>
+        </a>
+
         <a
           href="mailto:diego.bedrinana.910@gmail.com"
-          class="contact-card"
+          class="contact-card email"
         >
-          <h2>Email</h2>
+          <div class="card-header">
+            <Icon icon="simple-icons:gmail" class="card-icon gmail-icon" />
+            <h2>Email</h2>
+          </div>
 
           <p>
             The best way to reach me for professional opportunities,
             collaborations, or general inquiries.
           </p>
 
-          <span>diego.bedrinana.910@gmail.com</span>
+          <span class="contact-link">
+            Send Email →
+          </span>
         </a>
 
         <a
           href="https://github.com/GoDie910"
           target="_blank"
           rel="noopener noreferrer"
-          class="contact-card"
+          class="contact-card github"
         >
-          <h2>GitHub</h2>
+          <div class="card-header">
+            <Icon icon="simple-icons:github" class="card-icon github-icon" />
+            <h2>GitHub</h2>
+          </div>
 
           <p>
             Explore my repositories, experiments, game projects,
             and open-source work.
           </p>
 
-          <span>github.com/GoDie910</span>
+          <span class="contact-link">
+            View Profile →
+          </span>
         </a>
 
         <a
           href="https://www.linkedin.com/in/diego-bed-alb/"
           target="_blank"
           rel="noopener noreferrer"
-          class="contact-card"
+          class="contact-card linkedin"
         >
-          <h2>LinkedIn</h2>
+          <div class="card-header">
+            <Icon icon="simple-icons:linkedin" class="card-icon linkedin-icon" />
+            <h2>LinkedIn</h2>
+          </div>
 
           <p>
             Connect professionally and stay updated on my latest
             projects and experience.
           </p>
 
-          <span>linkedin.com/in/diego-bed-alb</span>
+          <span class="contact-link">
+            Connect →
+          </span>
         </a>
+
       </div>
     </section>
   </main>
 </template>
+
+<script lang="ts" setup>
+import { Icon } from "@iconify/vue";
+</script>
 
 <style scoped>
 .contact-view {
@@ -93,6 +141,12 @@
   font-size: 1.1rem;
   line-height: 1.8;
   opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.location {
+  font-weight: 600;
+  opacity: 0.75;
 }
 
 .contact-section {
@@ -122,11 +176,47 @@
 
 .contact-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.contact-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.resume-icon {
+  color: #ec1c24;
+}
+
+.gmail-icon {
+  color: #ea4335;
+}
+
+.github-icon {
+  color: #ffffff;
+}
+
+.linkedin-icon {
+  color: #0a66c2;
 }
 
 .contact-card h2 {
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .contact-card p {
@@ -135,8 +225,24 @@
   margin-bottom: 1rem;
 }
 
-.contact-card span {
+.contact-link {
   font-weight: 600;
+}
+
+.email:hover {
+  border-color: #ea4335;
+}
+
+.github:hover {
+  border-color: #6e5494;
+}
+
+.linkedin:hover {
+  border-color: #0a66c2;
+}
+
+.resume:hover {
+  border-color: #22c55e;
 }
 
 @media (max-width: 768px) {
