@@ -44,7 +44,7 @@
         </a>
 
         <a
-          href="https://linkedin.com/in/your-linkedin"
+          href="https://www.linkedin.com/in/diego-bed-alb/"
           target="_blank"
           rel="noopener noreferrer"
           class="contact-card"
@@ -56,21 +56,9 @@
             projects and experience.
           </p>
 
-          <span>linkedin.com/in/your-linkedin</span>
+          <span>linkedin.com/in/diego-bed-alb</span>
         </a>
       </div>
-    </section>
-
-    <section class="availability">
-      <p class="section-label">CURRENT STATUS</p>
-
-      <h2>Open to opportunities.</h2>
-
-      <p>
-        I'm interested in frontend engineering, web application
-        development, healthcare technology, game development,
-        and product-focused software projects.
-      </p>
     </section>
   </main>
 </template>
@@ -149,19 +137,6 @@
 
 .contact-card span {
   font-weight: 600;
-}
-
-.availability {
-  max-width: 700px;
-}
-
-.availability h2 {
-  margin-bottom: 1rem;
-}
-
-.availability p:last-child {
-  line-height: 1.8;
-  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
