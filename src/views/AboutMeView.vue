@@ -128,36 +128,6 @@
         </p>
       </div>
     </section>
-
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">QUICK FACTS</p>
-
-        <h2>At a glance.</h2>
-      </div>
-
-      <div class="focus-grid">
-        <div class="focus-card">
-          <h3>Location</h3>
-          <p>Peru</p>
-        </div>
-
-        <div class="focus-card">
-          <h3>Specialization</h3>
-          <p>Frontend Development</p>
-        </div>
-
-        <div class="focus-card">
-          <h3>Industry Experience</h3>
-          <p>Healthcare, Finance, Business Systems</p>
-        </div>
-
-        <div class="focus-card">
-          <h3>Personal Projects</h3>
-          <p>Game Development & Experimental Systems</p>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -239,15 +209,13 @@
   opacity: 0.9;
 }
 
-.tech-grid,
-.focus-grid {
+.tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.tech-card,
-.focus-card {
+.tech-card {
   padding: 1.5rem;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -256,19 +224,16 @@
     border-color 0.2s ease;
 }
 
-.tech-card:hover,
-.focus-card:hover {
+.tech-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.tech-card h3,
-.focus-card h3 {
+.tech-card h3 {
   margin-bottom: 0.75rem;
 }
 
-.tech-card p,
-.focus-card p {
+.tech-card p {
   margin: 0;
   line-height: 1.7;
 }
@@ -283,8 +248,7 @@
     margin-bottom: 4rem;
   }
 
-  .tech-grid,
-  .focus-grid {
+  .tech-grid {
     grid-template-columns: 1fr;
   }
 }
