@@ -8,117 +8,153 @@
       <p class="hero-description">
         I'm a software engineer focused on frontend development, user
         experience, and creating products that feel intuitive to use.
-        I enjoy building both practical applications and game systems,
-        always looking for opportunities to learn and experiment.
       </p>
-    </section>
 
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">MY JOURNEY</p>
-
-        <h2>From curiosity to creation.</h2>
-      </div>
-
-      <div class="content">
-        <p>
-          My path into software development started with a simple interest in
-          understanding how technology works. Over time, that curiosity evolved
-          into a passion for building applications, solving problems, and
-          creating experiences that people genuinely enjoy using.
-        </p>
-
-        <p>
-          Throughout my career, I've worked on web applications, internal
-          business tools, financial platforms, and healthcare-related projects.
-          Each project has taught me something new about technology,
-          collaboration, and product design.
-        </p>
+      <div class="hero-actions">
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cv-button"
+        >
+          Download CV
+        </a>
       </div>
     </section>
 
     <section class="content-section">
       <div class="section-header">
-        <p class="section-label">WHAT I BUILD</p>
+        <p class="section-label">BIO</p>
 
-        <h2>Software that serves a purpose.</h2>
+        <h2>Who I am.</h2>
       </div>
 
       <div class="content">
         <p>
-          I enjoy creating interfaces that feel clean, responsive, and easy to
-          understand. My primary focus is frontend development, but I'm also
-          interested in application architecture, usability, and long-term
-          maintainability.
+          I'm a software engineer based in Peru with a strong focus on frontend
+          development and user experience. I enjoy building interfaces that are
+          clean, maintainable, and easy to use.
         </p>
 
         <p>
-          Whether it's a business dashboard, a healthcare platform, or a
-          personal project, I try to approach every application with the same
-          mindset: build something useful, understandable, and reliable.
+          Beyond web development, I enjoy experimenting with game development,
+          learning new technologies, and designing software systems that balance
+          functionality with simplicity.
         </p>
       </div>
     </section>
 
     <section class="content-section">
       <div class="section-header">
-        <p class="section-label">GAME DEVELOPMENT</p>
+        <p class="section-label">CAREER</p>
 
-        <h2>Exploring systems and storytelling.</h2>
+        <h2>Professional background.</h2>
       </div>
 
       <div class="content">
         <p>
-          Outside of professional software development, I enjoy designing and
-          experimenting with games. Game development allows me to explore
-          systems design, progression mechanics, worldbuilding, and interactive
+          My professional experience includes frontend development, internal
+          business systems, healthcare platforms, financial applications, and
+          custom web solutions.
+        </p>
+
+        <p>
+          Throughout my career I've worked closely with designers, business
+          stakeholders, and development teams to deliver reliable software and
+          improve user workflows.
+        </p>
+
+        <p>
+          My primary expertise is frontend engineering, although I also have
+          experience working across the full web application stack when
+          required.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-header">
+        <p class="section-label">TECHNOLOGIES</p>
+
+        <h2>Tools I work with.</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Frontend</h3>
+          <p>Vue 3, TypeScript, JavaScript, HTML, CSS, Vuetify</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Backend</h3>
+          <p>PHP, Node.js, .NET, REST APIs</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Databases</h3>
+          <p>MySQL, SQL Server</p>
+        </div>
+
+        <div class="tech-card">
+          <h3>Tools</h3>
+          <p>Git, GitHub, Linux, VSCodium</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-header">
+        <p class="section-label">INTERESTS</p>
+
+        <h2>Beyond work.</h2>
+      </div>
+
+      <div class="content">
+        <p>
+          Outside of professional software development, I enjoy creating games,
+          experimenting with RPG systems, and exploring interactive
           storytelling.
         </p>
 
         <p>
-          I frequently work with engines and tools such as Godot, Unity, and
-          RPG Maker, creating prototypes and learning through experimentation.
+          I regularly work on personal projects using Godot, Unity, and RPG
+          Maker, building prototypes to learn new design and development
+          techniques.
+        </p>
+
+        <p>
+          I'm also interested in software architecture, user experience design,
+          and continuously expanding my technical knowledge.
         </p>
       </div>
     </section>
 
     <section class="content-section">
       <div class="section-header">
-        <p class="section-label">CURRENT FOCUS</p>
+        <p class="section-label">QUICK FACTS</p>
 
-        <h2>Always learning.</h2>
+        <h2>At a glance.</h2>
       </div>
 
-      <div class="content">
-        <div class="focus-grid">
-          <div class="focus-card">
-            <h3>Frontend Engineering</h3>
-            <p>Vue 3, TypeScript, responsive interfaces, and UI architecture.</p>
-          </div>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <h3>Location</h3>
+          <p>Peru</p>
+        </div>
 
-          <div class="focus-card">
-            <h3>Product Development</h3>
-            <p>
-              Building applications that solve real-world problems and improve
-              user workflows.
-            </p>
-          </div>
+        <div class="focus-card">
+          <h3>Specialization</h3>
+          <p>Frontend Development</p>
+        </div>
 
-          <div class="focus-card">
-            <h3>Game Systems</h3>
-            <p>
-              RPG mechanics, progression systems, inventory design, and player
-              experience.
-            </p>
-          </div>
+        <div class="focus-card">
+          <h3>Industry Experience</h3>
+          <p>Healthcare, Finance, Business Systems</p>
+        </div>
 
-          <div class="focus-card">
-            <h3>Continuous Learning</h3>
-            <p>
-              Exploring new technologies, development practices, and creative
-              challenges.
-            </p>
-          </div>
+        <div class="focus-card">
+          <h3>Personal Projects</h3>
+          <p>Game Development & Experimental Systems</p>
         </div>
       </div>
     </section>
@@ -157,6 +193,29 @@
   opacity: 0.85;
 }
 
+.hero-actions {
+  margin-top: 2rem;
+}
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.cv-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
 .content-section {
   margin-bottom: 6rem;
 }
@@ -180,12 +239,14 @@
   opacity: 0.9;
 }
 
+.tech-grid,
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
+.tech-card,
 .focus-card {
   padding: 1.5rem;
   border-radius: 16px;
@@ -195,15 +256,18 @@
     border-color 0.2s ease;
 }
 
+.tech-card:hover,
 .focus-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.tech-card h3,
 .focus-card h3 {
   margin-bottom: 0.75rem;
 }
 
+.tech-card p,
 .focus-card p {
   margin: 0;
   line-height: 1.7;
@@ -219,6 +283,7 @@
     margin-bottom: 4rem;
   }
 
+  .tech-grid,
   .focus-grid {
     grid-template-columns: 1fr;
   }
