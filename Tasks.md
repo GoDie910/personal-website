@@ -42,22 +42,12 @@
 ### AboutMeView
 
 - Design and develop the About Me page
-- Add:
-  - Bio
-  - Career background
-  - Technologies
-  - Interests / hobbies
-  - Download CV button
+- reuse the technologies wheel from landing here
 
 ### ProjectsView
 
-- Design and develop the Projects page
-- Add:
-  - Project cards
-  - Screenshots
-  - Tech stack tags
-  - GitHub / live demo links
-  - Filtering by category or technology
+- add proper screenshots
+- reference the proper links and live Demos
 
 ## Future Ideas
 

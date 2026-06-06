@@ -12,118 +12,160 @@
       </p>
     </section>
 
-    <section class="projects-section">
-      <div class="section-header">
-        <p class="section-label">SOFTWARE</p>
-
-        <h2>Professional Projects</h2>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Trainimize</h3>
-
-          <p>
-            A fitness tracking platform focused on logging workouts,
-            exercises, sets, and repetitions. The application analyzes
-            training history to help users understand their progress and
-            identify opportunities for improvement.
-          </p>
-
-          <div class="project-tags">
-            <span>Vue</span>
-            <span>TypeScript</span>
-            <span>Analytics</span>
-            <span>Fitness</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3>Tinnitus</h3>
-
-          <p>
-            A medical platform designed to support tinnitus treatment
-            through remote therapy tools, appointment scheduling,
-            patient management, and communication between patients
-            and healthcare professionals.
-          </p>
-
-          <div class="project-tags">
-            <span>Healthcare</span>
-            <span>Scheduling</span>
-            <span>Telemedicine</span>
-            <span>Web App</span>
-          </div>
-        </article>
+    <section class="filters-section">
+      <div class="filters">
+        <button
+          v-for="filter in filters"
+          :key="filter"
+          class="filter-button"
+          :class="{ active: selectedFilter === filter }"
+          @click="selectedFilter = filter"
+        >
+          {{ filter }}
+        </button>
       </div>
     </section>
 
     <section class="projects-section">
-      <div class="section-header">
-        <p class="section-label">GAMES</p>
-
-        <h2>Game Development</h2>
-      </div>
-
       <div class="projects-grid">
-        <article class="project-card">
-          <h3>Jormun</h3>
+        <article
+          v-for="project in filteredProjects"
+          :key="project.title"
+          class="project-card"
+        >
+          <img
+            :src="project.image"
+            :alt="project.title"
+            class="project-image"
+          />
 
-          <p>
-            A short narrative-focused game created for a game jam.
-            The project explores storytelling, atmosphere, and
-            player immersion through a compact experience.
-          </p>
+          <h3>{{ project.title }}</h3>
 
-          <a
-            href="https://godie910.itch.io/jormun"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link"
-          >
-            Play on itch.io →
-          </a>
-        </article>
-
-        <article class="project-card">
-          <h3>Goblin Game</h3>
-
-          <p>
-            An RPG Maker project centered around goblins, world-building,
-            progression systems, and experimentation with role-playing
-            game mechanics.
-          </p>
-
-          <a
-            href="https://github.com/GoDie910/test-rmmz-ggg"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link"
-          >
-            View on GitHub →
-          </a>
-        </article>
-
-        <article class="project-card">
-          <h3>Experimental Projects</h3>
-
-          <p>
-            A collection of prototypes, gameplay systems, and technical
-            experiments created while exploring game design, AI behavior,
-            progression systems, and player interaction.
-          </p>
+          <p>{{ project.description }}</p>
 
           <div class="project-tags">
-            <span>Godot</span>
-            <span>Unity</span>
-            <span>RPG Maker</span>
-            <span>Prototyping</span>
+            <span
+              v-for="tech in project.technologies"
+              :key="tech"
+            >
+              {{ tech }}
+            </span>
+          </div>
+
+          <div class="project-links">
+            <a
+              v-if="project.github"
+              :href="project.github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              v-if="project.demo"
+              :href="project.demo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo
+            </a>
           </div>
         </article>
       </div>
     </section>
   </main>
 </template>
+
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+
+const selectedFilter = ref('All')
+
+const filters = [
+  'All',
+  'Software',
+  'Games',
+  'Vue',
+  'TypeScript',
+  'Godot',
+  'PHP',
+]
+
+const projects = [
+  {
+    title: 'Trainimize',
+    category: 'Software',
+    image:
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80',
+    description:
+      'A fitness tracking platform focused on logging workouts, exercises, sets, and repetitions while providing analytics and progress tracking.',
+    technologies: ['Vue', 'TypeScript', 'Fitness'],
+    github: '',
+    demo: '',
+  },
+
+  {
+    title: 'Tinnitus',
+    category: 'Software',
+    image:
+      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80',
+    description:
+      'A medical platform supporting tinnitus treatment through patient management, scheduling, communication, and therapy tools.',
+    technologies: ['Vue', 'Healthcare', 'Scheduling'],
+    github: '',
+    demo: '',
+  },
+
+  {
+    title: 'Jormun',
+    category: 'Games',
+    image:
+      'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80',
+    description:
+      'A narrative-focused game jam project exploring storytelling, atmosphere, and player immersion.',
+    technologies: ['Godot', 'Game Jam'],
+    github: '',
+    demo: 'https://godie910.itch.io/jormun',
+  },
+
+  {
+    title: 'Goblin Game',
+    category: 'Games',
+    image:
+      'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80',
+    description:
+      'An RPG Maker project centered around progression systems, world-building, and role-playing mechanics.',
+    technologies: ['RPG Maker'],
+    github: 'https://github.com/GoDie910/test-rmmz-ggg',
+    demo: '',
+  },
+
+  {
+    title: 'Experimental Projects',
+    category: 'Games',
+    image:
+      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80',
+    description:
+      'A collection of prototypes and technical experiments focused on gameplay systems, progression, AI behavior, and player interaction.',
+    technologies: ['Godot', 'Unity', 'RPG Maker'],
+    github: '',
+    demo: '',
+  },
+]
+
+const filteredProjects = computed(() => {
+  if (selectedFilter.value === 'All') {
+    return projects
+  }
+
+  return projects.filter(
+    project =>
+      project.category === selectedFilter.value ||
+      project.technologies.includes(selectedFilter.value),
+  )
+})
+</script>
 
 <style scoped>
 .projects-view {
@@ -133,7 +175,7 @@
 }
 
 .hero {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .section-label {
@@ -154,33 +196,51 @@
   max-width: 700px;
   font-size: 1.1rem;
   line-height: 1.8;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-.projects-section {
-  margin-bottom: 6rem;
+.filters-section {
+  margin-bottom: 3rem;
 }
 
-.section-header {
-  margin-bottom: 2rem;
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.section-header h2 {
-  font-size: 2rem;
-  margin-top: 0.5rem;
+.filter-button {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+}
+
+.filter-button.active {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 1.5rem;
 }
 
 .project-card {
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
   border-radius: 16px;
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
@@ -191,13 +251,20 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.project-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
 .project-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
 }
 
 .project-card p {
-  line-height: 1.7;
+  line-height: 1.8;
   opacity: 0.85;
 }
 
@@ -205,7 +272,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 
 .project-tags span {
@@ -215,9 +282,14 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-.project-link {
-  display: inline-block;
-  margin-top: 1.5rem;
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.project-links a {
   text-decoration: none;
   font-weight: 600;
 }
