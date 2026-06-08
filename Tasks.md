@@ -19,7 +19,7 @@
 
 - Ensure layouts do not break on extreme resolutions
 
-## Skills Section
+## Landing: Skills Section
 
 - Explore interactive UI ideas:
   - Clicking a category opens a radial/wheel menu
