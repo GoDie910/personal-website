@@ -1,3 +1,42 @@
+<template>
+  <section class="skills-section">
+    <div class="section-header">
+      <p class="section-label">SKILLS</p>
+
+      <h2>Technologies, tools, and domains I work with.</h2>
+    </div>
+
+    <div class="category-tabs">
+      <button
+        v-for="(category, index) in skillCategories"
+        :key="category.title"
+        class="category-pill"
+        :class="{ active: selectedCategory === index }"
+        @click="selectedCategory = index"
+      >
+        {{ category.title }}
+      </button>
+    </div>
+
+    <div class="technology-grid">
+      <article
+        v-for="skill in currentCategory.skills"
+        :key="skill"
+        class="technology-tile"
+      >
+        <Icon
+          :icon="getIcon(skill)"
+          class="technology-icon"
+        />
+
+        <span class="technology-name">
+          {{ skill }}
+        </span>
+      </article>
+    </div>
+  </section>
+</template>
+
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { Icon } from '@iconify/vue'
@@ -123,48 +162,12 @@ const iconMap: Record<string, string> = {
   'Technical Documentation': 'mdi:file-document-outline',
   'Agile Workflows': 'mdi:sync',
   'Problem Solving': 'mdi:lightbulb-outline',
+  'RPG Maker MZ': 'mdi:sword-cross',
 }
 
 const getIcon = (skill: string) =>
   iconMap[skill] ?? iconDefault
 </script>
-
-<template>
-  <section class="skills-section">
-    <div class="section-header">
-      <p class="section-label">SKILLS</p>
-
-      <h2>Technologies, tools, and domains I work with.</h2>
-    </div>
-
-    <div class="category-tabs">
-      <button
-        v-for="(category, index) in skillCategories"
-        :key="category.title"
-        class="category-pill"
-        :class="{ active: selectedCategory === index }"
-        @click="selectedCategory = index"
-      >
-        {{ category.title }}
-      </button>
-    </div>
-
-    <div class="technology-grid">
-      <article
-        v-for="skill in currentCategory.skills"
-        :key="skill"
-        class="technology-card"
-      >
-        <Icon
-          :icon="getIcon(skill)"
-          class="technology-icon"
-        />
-    
-        <span>{{ skill }}</span>
-      </article>
-    </div>
-  </section>
-</template>
 
 <style scoped>
 .skills-section {
@@ -249,35 +252,43 @@ h2 {
 
   grid-template-columns: repeat(
     auto-fit,
-    minmax(180px, 1fr)
+    minmax(220px, 1fr)
   );
 
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
-.technology-card {
+.technology-tile {
   display: flex;
+
+  flex-direction: column;
 
   align-items: center;
 
-  gap: 1rem;
+  justify-content: center;
 
-  padding: 1rem 1.25rem;
+  gap: 1.5rem;
 
-  border-radius: 1rem;
+  min-height: 220px;
+
+  padding: 2rem;
+
+  border-radius: 1.5rem;
 
   background: rgba(255, 255, 255, 0.03);
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
+  backdrop-filter: blur(12px);
+
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
-.technology-card:hover {
-  transform: translateY(-4px);
+.technology-tile:hover {
+  transform: translateY(-6px);
 
   border-color: rgba(255, 255, 255, 0.18);
 
@@ -285,13 +296,21 @@ h2 {
 }
 
 .technology-icon {
-  flex-shrink: 0;
+  font-size: clamp(4rem, 6vw, 5.5rem);
 
-  font-size: 2rem;
+  transition: transform 0.25s ease;
 }
 
-.technology-card span {
-  font-size: 0.95rem;
+.technology-tile:hover .technology-icon {
+  transform: scale(1.08);
+}
+
+.technology-name {
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  text-align: center;
 
   color: #d8d8d8;
 }
@@ -308,7 +327,24 @@ h2 {
   }
 
   .technology-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+  .technology-tile {
+    min-height: 180px;
+
+    padding: 1.5rem;
+  }
+
+  .technology-icon {
+    font-size: 3.5rem;
+  }
+
+  .technology-name {
+    font-size: 0.9rem;
   }
 }
 </style>
