@@ -21,16 +21,16 @@
     <div class="technology-grid">
       <article
         v-for="skill in currentCategory.skills"
-        :key="skill"
+        :key="skill.name"
         class="technology-tile"
       >
         <Icon
-          :icon="getIcon(skill)"
+          :icon="skill.icon"
           class="technology-icon"
         />
-
+        
         <span class="technology-name">
-          {{ skill }}
+          {{ skill.name }}
         </span>
       </article>
     </div>
@@ -41,76 +41,143 @@
 import { computed, ref } from 'vue'
 import { Icon } from '@iconify/vue'
 
-const skillCategories = [
+type Skill = {
+  name: string
+  icon: string
+}
+
+type SkillCategory = {
+  title: string
+  skills: Skill[]
+}
+
+const skillCategories: SkillCategory[] = [
   {
     title: 'Frontend',
     skills: [
-      'Vue 3',
-      'TypeScript',
-      'JavaScript',
-      'Vuetify',
-      'HTML5',
-      'CSS3',
-      'SCSS',
-      'Responsive Design',
-      'UI Architecture',
+      { name: 'Vue 3', icon: 'logos:vue' },
+      { name: 'TypeScript', icon: 'logos:typescript-icon' },
+      { name: 'JavaScript', icon: 'logos:javascript' },
+      { name: 'Vuetify', icon: 'logos:vuetifyjs' },
+      { name: 'HTML5', icon: 'logos:html-5' },
+      { name: 'CSS3', icon: 'logos:css-3' },
+      { name: 'SCSS', icon: 'logos:sass' },
+      {
+        name: 'Responsive Design',
+        icon: 'mdi:cellphone-responsive',
+      },
+      {
+        name: 'UI Architecture',
+        icon: 'mdi:view-dashboard-outline',
+      },
     ],
   },
 
   {
     title: 'Backend',
     skills: [
-      'PHP',
-      'Node.js',
-      'REST APIs',
-      'Authentication',
-      'Business Logic',
+      { name: 'PHP', icon: 'logos:php' },
+      { name: 'Node.js', icon: 'logos:nodejs-icon' },
+      { name: 'REST APIs', icon: 'mdi:api' },
+      {
+        name: 'Authentication',
+        icon: 'mdi:shield-lock-outline',
+      },
+      {
+        name: 'Business Logic',
+        icon: 'mdi:cog-outline',
+      },
     ],
   },
 
   {
     title: 'Databases',
     skills: [
-      'MySQL',
-      'SQL',
-      'Relational Modeling',
-      'Data Management',
+      { name: 'MySQL', icon: 'logos:mysql' },
+      { name: 'SQL', icon: 'mdi:database' },
+      {
+        name: 'Relational Modeling',
+        icon: 'mdi:relation-many-to-many',
+      },
+      {
+        name: 'Data Management',
+        icon: 'mdi:database-cog',
+      },
     ],
   },
 
   {
     title: 'DevOps',
     skills: [
-      'Git',
-      'GitHub',
-      'GitHub Actions',
-      'Netlify',
-      'CI/CD',
-      'Deployment',
+      { name: 'Git', icon: 'logos:git-icon' },
+      { name: 'GitHub', icon: 'logos:github-icon' },
+      {
+        name: 'GitHub Actions',
+        icon: 'logos:github-actions',
+      },
+      { name: 'Netlify', icon: 'logos:netlify' },
+      {
+        name: 'CI/CD',
+        icon: 'mdi:source-branch-sync',
+      },
+      {
+        name: 'Deployment',
+        icon: 'mdi:rocket-launch-outline',
+      },
     ],
   },
 
   {
     title: 'Game Dev',
     skills: [
-      'Godot',
-      'Unity',
-      'RPG Maker MZ',
-      'Game Design',
-      'Systems Design',
-      'Balancing',
-      'Prototyping',
+      { name: 'Godot', icon: 'logos:godot-icon' },
+      { name: 'Unity', icon: 'logos:unity' },
+      {
+        name: 'RPG Maker MZ',
+        icon: 'mdi:sword-cross',
+      },
+      {
+        name: 'Game Design',
+        icon: 'mdi:controller-classic-outline',
+      },
+      {
+        name: 'Systems Design',
+        icon: 'mdi:sitemap-outline',
+      },
+      {
+        name: 'Balancing',
+        icon: 'mdi:scale-balance',
+      },
+      {
+        name: 'Prototyping',
+        icon: 'mdi:test-tube',
+      },
     ],
   },
 
   {
     title: 'Tools & Misc',
     skills: [
-      'VSCodium',
-      'Figma',
-      'Technical Documentation',
-      'Agile Workflows',
-      'Problem Solving',
+      {
+        name: 'VSCodium',
+        icon: 'mdi:code-braces',
+      },
+      {
+        name: 'Figma',
+        icon: 'logos:figma',
+      },
+      {
+        name: 'Technical Documentation',
+        icon: 'mdi:file-document-outline',
+      },
+      {
+        name: 'Agile Workflows',
+        icon: 'mdi:sync',
+      },
+      {
+        name: 'Problem Solving',
+        icon: 'mdi:lightbulb-outline',
+      },
     ],
   },
 ]
@@ -120,53 +187,6 @@ const selectedCategory = ref(0)
 const currentCategory = computed(
   () => skillCategories[selectedCategory.value]!,
 )
-const iconDefault: string = 'mdi:code-tags'
-const iconMap: Record<string, string> = {
-  'Vue 3': 'logos:vue',
-  TypeScript: 'logos:typescript-icon',
-  JavaScript: 'logos:javascript',
-  Vuetify: 'logos:vuetifyjs',
-  HTML5: 'logos:html-5',
-  CSS3: 'logos:css-3',
-  SCSS: 'logos:sass',
-
-  PHP: 'logos:php',
-  'Node.js': 'logos:nodejs-icon',
-  MySQL: 'logos:mysql',
-
-  Git: 'logos:git-icon',
-  GitHub: 'logos:github-icon',
-  'GitHub Actions': 'logos:github-actions',
-  Netlify: 'logos:netlify',
-
-  Godot: 'logos:godot-icon',
-  Unity: 'logos:unity',
-
-  Figma: 'logos:figma',
-
-  'Responsive Design': 'mdi:cellphone-responsive',
-  'UI Architecture': 'mdi:view-dashboard-outline',
-  'REST APIs': 'mdi:api',
-  Authentication: 'mdi:shield-lock-outline',
-  'Business Logic': 'mdi:cog-outline',
-  SQL: 'mdi:database',
-  'Relational Modeling': 'mdi:relation-many-to-many',
-  'Data Management': 'mdi:database-cog',
-  'CI/CD': 'mdi:source-branch-sync',
-  Deployment: 'mdi:rocket-launch-outline',
-  'Game Design': 'mdi:controller-classic-outline',
-  'Systems Design': 'mdi:sitemap-outline',
-  Balancing: 'mdi:scale-balance',
-  Prototyping: 'mdi:test-tube',
-  VSCodium: 'mdi:code-braces',
-  'Technical Documentation': 'mdi:file-document-outline',
-  'Agile Workflows': 'mdi:sync',
-  'Problem Solving': 'mdi:lightbulb-outline',
-  'RPG Maker MZ': 'mdi:sword-cross',
-}
-
-const getIcon = (skill: string) =>
-  iconMap[skill] ?? iconDefault
 </script>
 
 <style scoped>
