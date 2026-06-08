@@ -22,7 +22,7 @@
       <article
         v-for="skill in currentCategory.skills"
         :key="skill.name"
-        class="technology-tile"
+        class="technology-item"
       >
         <Icon
           :icon="skill.icon"
@@ -272,99 +272,62 @@ h2 {
 
   grid-template-columns: repeat(
     auto-fit,
-    minmax(220px, 1fr)
+    minmax(120px, 1fr)
   );
 
-  gap: 1.25rem;
+  gap: 2rem;
 }
 
-.technology-tile {
+.technology-item {
   display: flex;
 
   flex-direction: column;
 
   align-items: center;
 
-  justify-content: center;
+  gap: 0.75rem;
 
-  gap: 1.5rem;
+  text-align: center;
 
-  min-height: 220px;
-
-  padding: 2rem;
-
-  border-radius: 1.5rem;
-
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(12px);
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
-.technology-tile:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(255, 255, 255, 0.18);
-
-  background: rgba(255, 255, 255, 0.05);
+.technology-item:hover {
+  transform: translateY(-4px);
 }
 
 .technology-icon {
-  font-size: clamp(4rem, 6vw, 5.5rem);
+  font-size: clamp(3rem, 5vw, 4.5rem);
 
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
-.technology-tile:hover .technology-icon {
+.technology-item:hover .technology-icon {
   transform: scale(1.08);
 }
 
 .technology-name {
-  font-size: 1rem;
-
-  font-weight: 500;
-
-  text-align: center;
+  font-size: 0.9rem;
 
   color: #d8d8d8;
 }
 
 @media (max-width: 48rem) {
-  .skills-section {
-    padding:
-      clamp(4rem, 8vh, 6rem)
-      5vw;
-  }
-
-  h2 {
-    max-width: 100%;
-  }
-
   .technology-grid {
     grid-template-columns: repeat(
-      2,
+      3,
       minmax(0, 1fr)
     );
-  }
 
-  .technology-tile {
-    min-height: 180px;
-
-    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   .technology-icon {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .technology-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 </style>
