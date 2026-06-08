@@ -60,11 +60,10 @@ const skillCategories: SkillCategory[] = [
       { name: 'JavaScript', icon: 'logos:javascript' },
       { name: 'Vuetify', icon: 'logos:vuetifyjs' },
       { name: 'HTML5', icon: 'logos:html-5' },
-      { name: 'CSS3', icon: 'logos:css-3' },
-      { name: 'SCSS', icon: 'logos:sass' },
+      { name: 'CSS', icon: 'logos:css-3' },
       {
         name: 'Responsive Design',
-        icon: 'mdi:cellphone-responsive',
+        icon: 'mdi:responsive',
       },
       {
         name: 'UI Architecture',

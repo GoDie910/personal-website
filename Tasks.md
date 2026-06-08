@@ -21,21 +21,12 @@
 
 ## Landing: Skills Section
 
-- Explore interactive UI ideas:
-  - Clicking a category opens a radial/wheel menu
-  - Animated skill icons
-  - Hover tooltips with experience level or descriptions
+- sort the list with the actual technologies we know
+- we could add gsap, pixi, etc
 
-## Internationalization (i18n)
+## Landing: Feature Projects Section
 
-- Add multilingual support
-- Default language: English
-- Add translations for:
-  - Spanish (`es`)
-  - Portuguese (`pt`)
-
-- Create a language switcher component
-- Store translations in modular locale files
+- make it better visually. use as a base ProjectsView.vue
 
 ## Views / Pages
 
@@ -48,6 +39,17 @@
 
 - add proper screenshots
 - reference the proper links and live Demos
+
+## Internationalization (i18n)
+
+- Add multilingual support
+- Default language: English
+- Add translations for:
+  - Spanish (`es`)
+  - Portuguese (`pt`)
+
+- Create a language switcher component
+- Store translations in modular locale files
 
 ## Future Ideas
 
