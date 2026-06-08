@@ -52,7 +52,7 @@ const skillCategories = [
   },
 
   {
-    title: 'Game Development',
+    title: 'Game Dev',
     skills: [
       'Godot',
       'Unity',
@@ -200,24 +200,21 @@ h2 {
 }
 
 .category-tabs {
-  display: flex;
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(140px, 1fr)
+  );  
 
   gap: 0.75rem;
 
-  overflow-x: auto;
-
   margin-bottom: 3rem;
-
-  padding-bottom: 0.5rem;
-
-  scrollbar-width: none;
-}
-
-.category-tabs::-webkit-scrollbar {
-  display: none;
 }
 
 .category-pill {
+  width: 100%;
+
   flex-shrink: 0;
 
   padding: 0.75rem 1.25rem;
