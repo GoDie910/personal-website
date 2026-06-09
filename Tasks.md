@@ -4,11 +4,13 @@
 
 - you go to a page -> you scroll down -> you go to another page, you start already scrolled down. you should start at the top.
 
-## Landing: Skills Section
+## Landing
+
+### Skills Section
 
 - get icons for gsap and pixi
 
-## Landing: Feature Projects Section
+### Feature Projects Section
 
 - make it better visually. use as a base ProjectsView.vue
 
@@ -22,6 +24,10 @@
 
 - add proper screenshots
 - reference the proper links and live Demos
+
+### ContactView
+
+- make it so the cv is downloaded different depending on the display language
 
 ## Internationalization (i18n)
 
