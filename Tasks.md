@@ -10,20 +10,11 @@
 
 - get icons for gsap and pixi
 
-### Feature Projects Section
-
-- make it better visually. use as a base ProjectsView.vue
-
 ## Views / Pages
 
 ### AboutMeView
 
 - "visit the Skills page at Home." must be link to the Landing's Skills section
-
-### ProjectsView
-
-- add proper screenshots
-- reference the proper links and live Demos
 
 ### ContactView
 
