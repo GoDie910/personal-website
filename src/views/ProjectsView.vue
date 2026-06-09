@@ -41,14 +41,13 @@ import { computed, ref } from 'vue'
 import ProjectCard from '@/components/projects/ProjectCard.vue'
 import { projects } from '@/assets/projects'
 
-const selectedFilter = ref('All')
+const projectCategories = new Set(
+  projects.flatMap(project => project.categories),
+)
 
-const filters = [
-  'All',
-  ...new Set(
-    projects.flatMap(project => project.categories)
-  ),
-]
+const filters = ['All', ...projectCategories]
+
+const selectedFilter = ref('All')
 
 const filteredProjects = computed(() => {
   if (selectedFilter.value === 'All') {
