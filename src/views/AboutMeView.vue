@@ -6,9 +6,15 @@
       <h1>Building software with curiosity and intention.</h1>
 
       <p class="hero-description">
-        I'm a software engineer focused on frontend development, user
-        experience, and creating products that feel intuitive to use.
+        Fullstack software engineer from Peru, building modern web applications,
+        business systems, and user-focused software solutions.
       </p>
+
+      <div class="hero-badges">
+        <div class="badge">📍 Peru</div>
+        <div class="badge">💼 Software Engineer</div>
+        <div class="badge">🌐 Fullstack Developer</div>
+      </div>
 
       <div class="hero-actions">
         <a
@@ -24,80 +30,86 @@
 
     <section class="content-section">
       <div class="section-header">
-        <p class="section-label">BIO</p>
-
-        <h2>Who I am.</h2>
+        <p class="section-label">AT A GLANCE</p>
+        <h2>Quick overview.</h2>
       </div>
 
-      <div class="content">
-        <p>
-          I'm a software engineer based in Peru with a strong focus on frontend
-          development and user experience. I enjoy building interfaces that are
-          clean, maintainable, and easy to use.
-        </p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon">💼</span>
+          <h3>Experience</h3>
+          <p>Professional software development across multiple industries.</p>
+        </div>
 
-        <p>
-          Beyond web development, I enjoy experimenting with game development,
-          learning new technologies, and designing software systems that balance
-          functionality with simplicity.
-        </p>
-      </div>
-    </section>
+        <div class="stat-card">
+          <span class="stat-icon">🚀</span>
+          <h3>Projects</h3>
+          <p>Web applications, internal platforms, and personal products.</p>
+        </div>
 
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">CAREER</p>
+        <div class="stat-card">
+          <span class="stat-icon">🛠️</span>
+          <h3>Technology</h3>
+          <p>Frontend, backend, databases, and software architecture.</p>
+        </div>
 
-        <h2>Professional background.</h2>
-      </div>
-
-      <div class="content">
-        <p>
-          My professional experience includes frontend development, internal
-          business systems, healthcare platforms, financial applications, and
-          custom web solutions.
-        </p>
-
-        <p>
-          Throughout my career I've worked closely with designers, business
-          stakeholders, and development teams to deliver reliable software and
-          improve user workflows.
-        </p>
-
-        <p>
-          My primary expertise is frontend engineering, although I also have
-          experience working across the full web application stack when
-          required.
-        </p>
+        <div class="stat-card">
+          <span class="stat-icon">🏗️</span>
+          <h3>Architecture</h3>
+          <p>Designing scalable, maintainable software systems and development workflows.</p>
+        </div>
       </div>
     </section>
 
     <section class="content-section">
       <div class="section-header">
         <p class="section-label">TECHNOLOGIES</p>
-
         <h2>Tools I work with.</h2>
       </div>
 
       <div class="tech-grid">
         <div class="tech-card">
           <h3>Frontend</h3>
-          <p>Vue 3, TypeScript, JavaScript, HTML, CSS, Vuetify</p>
+
+          <div class="tags">
+            <span class="tag">Vue 3</span>
+            <span class="tag">Angular</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Vuetify</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <h3>Backend</h3>
-          <p>PHP, Node.js, .NET, REST APIs</p>
+
+          <div class="tags">
+            <span class="tag">PHP</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">.NET</span>
+            <span class="tag">REST APIs</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <h3>Databases</h3>
-          <p>MySQL, SQL Server</p>
+
+          <div class="tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">SQL Server</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <h3>Tools</h3>
-          <p>Git, GitHub, Linux, VSCodium</p>
+
+          <div class="tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Linux</span>
+            <span class="tag">VSCodium</span>
+          </div>
         </div>
       </div>
     </section>
@@ -105,27 +117,74 @@
     <section class="content-section">
       <div class="section-header">
         <p class="section-label">INTERESTS</p>
+        <h2>What keeps me learning.</h2>
+      </div>
+    
+      <div class="interests-grid">
+        <div class="interest-card">
+          <span>🎨</span>
+          <h3>User Experience</h3>
+          <p>
+            Creating interfaces that feel intuitive, accessible, and enjoyable to
+            use.
+          </p>
+        </div>
+      
+        <div class="interest-card">
+          <span>⚙️</span>
+          <h3>Software Architecture</h3>
+          <p>
+            Exploring patterns and practices that improve maintainability and
+            scalability.
+          </p>
+        </div>
+      
+        <div class="interest-card">
+          <span>💻</span>
+          <h3>Modern Web Technologies</h3>
+          <p>
+            Keeping up with frameworks, tooling, cloud services, and development
+            workflows.
+          </p>
+        </div>
+      
+        <div class="interest-card">
+          <span>🎮</span>
+          <h3>Game Development</h3>
+          <p>
+            A personal hobby where I experiment with gameplay systems, RPG
+            mechanics, and interactive storytelling.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <h2>Beyond work.</h2>
+    <section class="content-section">
+      <div class="section-header">
+        <p class="section-label">JOURNEY</p>
+        <h2>Career highlights.</h2>
       </div>
 
-      <div class="content">
-        <p>
-          Outside of professional software development, I enjoy creating games,
-          experimenting with RPG systems, and exploring interactive
-          storytelling.
-        </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2022</span>
+          <p>Started professional software development.</p>
+        </div>
 
-        <p>
-          I regularly work on personal projects using Godot, Unity, and RPG
-          Maker, building prototypes to learn new design and development
-          techniques.
-        </p>
+        <div class="timeline-item">
+          <span class="timeline-year">2023</span>
+          <p>Worked on healthcare and business platforms.</p>
+        </div>
 
-        <p>
-          I'm also interested in software architecture, user experience design,
-          and continuously expanding my technical knowledge.
-        </p>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <p>Expanded into financial systems and frontend engineering.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="timeline-year">Today</span>
+          <p>Building modern web applications and personal game projects.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -139,7 +198,7 @@
 }
 
 .hero {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 .section-label {
@@ -163,6 +222,19 @@
   opacity: 0.85;
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.badge {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .hero-actions {
   margin-top: 2rem;
 }
@@ -176,14 +248,11 @@
   text-decoration: none;
   font-weight: 600;
   border: 1px solid currentColor;
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .cv-button:hover {
   transform: translateY(-2px);
-  opacity: 0.85;
 }
 
 .content-section {
@@ -196,45 +265,72 @@
 
 .section-header h2 {
   font-size: 2rem;
-  margin-top: 0.5rem;
 }
 
-.content {
-  max-width: 850px;
-}
-
-.content p {
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
-}
-
-.tech-grid {
+.stats-grid,
+.tech-grid,
+.interests-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.tech-card {
+.stat-card,
+.tech-card,
+.interest-card {
   padding: 1.5rem;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.tech-card:hover {
+.stat-card:hover,
+.tech-card:hover,
+.interest-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
-.tech-card h3 {
-  margin-bottom: 0.75rem;
+.stat-icon,
+.interest-card span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.tech-card p {
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.timeline-year {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
   margin: 0;
+  opacity: 0.85;
   line-height: 1.7;
 }
 
@@ -248,8 +344,8 @@
     margin-bottom: 4rem;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr;
+  .hero-badges {
+    flex-direction: column;
   }
 }
 </style>
