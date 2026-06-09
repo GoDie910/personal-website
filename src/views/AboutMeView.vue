@@ -11,9 +11,20 @@
       </p>
 
       <div class="hero-badges">
-        <div class="badge">📍 Peru</div>
-        <div class="badge">💼 Software Engineer</div>
-        <div class="badge">🌐 Fullstack Developer</div>
+        <div class="badge">
+          <Icon icon="mdi:map-marker-outline" />
+          <span>Peru</span>
+        </div>
+      
+        <div class="badge">
+          <Icon icon="mdi:briefcase-outline" />
+          <span>Software Engineer</span>
+        </div>
+      
+        <div class="badge">
+          <Icon icon="mdi:web" />
+          <span>Fullstack Developer</span>
+        </div>
       </div>
 
       <div class="hero-actions">
@@ -36,25 +47,37 @@
 
       <div class="stats-grid">
         <div class="stat-card">
-          <span class="stat-icon">💼</span>
+          <Icon
+            icon="mdi:briefcase-outline"
+            class="stat-icon"
+          />
           <h3>Experience</h3>
           <p>Professional software development across multiple industries.</p>
         </div>
 
         <div class="stat-card">
-          <span class="stat-icon">🚀</span>
+          <Icon
+            icon="mdi:rocket-launch-outline"
+            class="stat-icon"
+          />
           <h3>Projects</h3>
           <p>Web applications, internal platforms, and personal products.</p>
         </div>
 
         <div class="stat-card">
-          <span class="stat-icon">🛠️</span>
+          <Icon
+            icon="mdi:tools"
+            class="stat-icon"
+          />
           <h3>Technology</h3>
           <p>Frontend, backend, databases, and software architecture.</p>
         </div>
 
         <div class="stat-card">
-          <span class="stat-icon">🏗️</span>
+          <Icon
+            icon="mdi:office-building-cog-outline"
+            class="stat-icon"
+          />
           <h3>Architecture</h3>
           <p>Designing scalable, maintainable software systems and development workflows.</p>
         </div>
@@ -141,7 +164,10 @@
     
       <div class="interests-grid">
         <div class="interest-card">
-          <span>🎨</span>
+          <Icon
+            icon="mdi:palette-outline"
+            class="interest-icon"
+          />
           <h3>User Experience</h3>
           <p>
             Creating interfaces that feel intuitive, accessible, and enjoyable to
@@ -150,7 +176,10 @@
         </div>
       
         <div class="interest-card">
-          <span>⚙️</span>
+          <Icon
+            icon="mdi:cog-outline"
+            class="interest-icon"
+          />
           <h3>Software Architecture</h3>
           <p>
             Exploring patterns and practices that improve maintainability and
@@ -159,7 +188,10 @@
         </div>
       
         <div class="interest-card">
-          <span>💻</span>
+          <Icon
+            icon="mdi:laptop"
+            class="interest-icon"
+          />
           <h3>Modern Web Technologies</h3>
           <p>
             Keeping up with frameworks, tooling, cloud services, and development
@@ -168,7 +200,10 @@
         </div>
       
         <div class="interest-card">
-          <span>🎮</span>
+          <Icon
+            icon="mdi:controller-classic-outline"
+            class="interest-icon"
+          />
           <h3>Game Development</h3>
           <p>
             A personal hobby where I experiment with gameplay systems, RPG
@@ -257,6 +292,10 @@ import { Icon } from '@iconify/vue'
 }
 
 .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
   padding: 0.75rem 1rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
