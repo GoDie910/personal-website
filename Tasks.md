@@ -1,9 +1,5 @@
 # Personal Website — Tasks
 
-## Bugs
-
-- you go to a page -> you scroll down -> you go to another page, you start already scrolled down. you should start at the top.
-
 ## Views / Pages
 
 ### AboutMeView
