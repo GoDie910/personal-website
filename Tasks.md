@@ -1,11 +1,5 @@
 # Personal Website — Tasks
 
-## Views / Pages
-
-### ContactView
-
-- make it so the cv is downloaded different depending on the display language
-
 ## Internationalization (i18n)
 
 - Add multilingual support
@@ -16,6 +10,12 @@
 
 - Create a language switcher component
 - Store translations in modular locale files
+
+## Views / Pages
+
+### ContactView
+
+- make it so the cv is downloaded different depending on the display language
 
 ## Responsive Design
 
