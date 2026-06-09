@@ -26,21 +26,29 @@
       </div>
     </section>
 
-    <section class="projects-section">
-      <div class="projects-grid">
-        <ProjectCard
-          v-for="project in filteredProjects"
-          :key="project.title"
-          :project="project"
-        />
-      </div>
-    </section>
+    <div class="projects-grid">
+      <ProjectCard
+        v-for="project in filteredProjects"
+        :key="project.title"
+        :project="project"
+      />
+    </div>
   </main>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import ProjectCard from '@/components/projects/ProjectCard.vue'
+
+interface Project {
+  title: string
+  category: string
+  image: string
+  description: string
+  technologies: string[]
+  github: string
+  demo: string
+}
 
 const selectedFilter = ref('All')
 
@@ -54,7 +62,7 @@ const filters = [
   'PHP',
 ]
 
-const projects = [
+const projects: Project[] = [
   {
     title: 'Trainimize',
     category: 'Software',
