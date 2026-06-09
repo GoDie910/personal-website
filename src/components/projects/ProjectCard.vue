@@ -42,15 +42,7 @@
 </template>
 
 <script setup lang="ts">
-interface Project {
-  title: string
-  category: string
-  image: string
-  description: string
-  technologies: string[]
-  github: string
-  demo: string
-}
+import { type Project } from '@/assets/projects';
 
 defineProps<{
   project: Project
