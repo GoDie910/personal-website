@@ -6,8 +6,7 @@
 
 ## Landing: Skills Section
 
-- sort the list with the actual technologies we know
-- we could add gsap, pixi, etc
+- get icons for gsap and pixi
 
 ## Landing: Feature Projects Section
 

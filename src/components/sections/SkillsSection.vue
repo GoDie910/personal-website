@@ -56,52 +56,43 @@ const skillCategories: SkillCategory[] = [
     title: 'Frontend',
     skills: [
       { name: 'Vue 3', icon: 'logos:vue' },
+      { name: 'Angular', icon: 'logos:angular-icon' },
+      { name: 'React', icon: 'logos:react' },
       { name: 'TypeScript', icon: 'logos:typescript-icon' },
       { name: 'JavaScript', icon: 'logos:javascript' },
-      { name: 'Vuetify', icon: 'logos:vuetifyjs' },
       { name: 'HTML5', icon: 'logos:html-5' },
       { name: 'CSS', icon: 'logos:css-3' },
-      {
-        name: 'Responsive Design',
-        icon: 'mdi:responsive',
-      },
-      {
-        name: 'UI Architecture',
-        icon: 'mdi:view-dashboard-outline',
-      },
+      { name: 'Responsive Design', icon: 'mdi:monitor-cellphone' },
+      { name: 'UI Architecture', icon: 'mdi:view-dashboard-outline' },
+      { name: 'GSAP', icon: 'simple-icons:gsap' },
+      { name: 'PixiJS', icon: 'mdi:vector-polygon' },
+      { name: 'Vuetify', icon: 'logos:vuetifyjs' },
+      { name: 'Vite', icon: 'logos:vitejs' },
+      { name: 'Pinia', icon: 'logos:pinia' },
     ],
   },
 
   {
     title: 'Backend',
     skills: [
-      { name: 'PHP', icon: 'logos:php' },
       { name: 'Node.js', icon: 'logos:nodejs-icon' },
+      { name: 'FastAPI', icon: 'logos:fastapi-icon' },
+      { name: 'ASP.NET Core', icon: 'logos:dotnet' },
+      { name: 'PHP', icon: 'logos:php' },
       { name: 'REST APIs', icon: 'mdi:api' },
-      {
-        name: 'Authentication',
-        icon: 'mdi:shield-lock-outline',
-      },
-      {
-        name: 'Business Logic',
-        icon: 'mdi:cog-outline',
-      },
+      { name: 'WebSockets', icon: 'mdi:connection' },
+      { name: 'Authentication', icon: 'mdi:shield-lock-outline' },
+      { name: 'Business Logic', icon: 'mdi:cog-outline' },
     ],
   },
 
   {
     title: 'Databases',
     skills: [
+      { name: 'PostgreSQL', icon: 'logos:postgresql' },
       { name: 'MySQL', icon: 'logos:mysql' },
-      { name: 'SQL', icon: 'mdi:database' },
-      {
-        name: 'Relational Modeling',
-        icon: 'mdi:relation-many-to-many',
-      },
-      {
-        name: 'Data Management',
-        icon: 'mdi:database-cog',
-      },
+      { name: 'SQL Server', icon: 'mdi:database-cog' },
+      { name: 'MongoDB', icon: 'logos:mongodb-icon' },
     ],
   },
 
@@ -110,19 +101,12 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Git', icon: 'logos:git-icon' },
       { name: 'GitHub', icon: 'logos:github-icon' },
-      {
-        name: 'GitHub Actions',
-        icon: 'logos:github-actions',
-      },
+      { name: 'GitHub Actions', icon: 'logos:github-actions' },
+      { name: 'GitLab', icon: 'logos:gitlab-icon' },
       { name: 'Netlify', icon: 'logos:netlify' },
-      {
-        name: 'CI/CD',
-        icon: 'mdi:source-branch-sync',
-      },
-      {
-        name: 'Deployment',
-        icon: 'mdi:rocket-launch-outline',
-      },
+      { name: 'Vitest', icon: 'logos:vitest' },
+      { name: 'CI/CD', icon: 'mdi:source-branch-sync' },
+      { name: 'Deployment', icon: 'mdi:rocket-launch-outline' },
     ],
   },
 
@@ -131,52 +115,22 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Godot', icon: 'logos:godot-icon' },
       { name: 'Unity', icon: 'logos:unity' },
-      {
-        name: 'RPG Maker MZ',
-        icon: 'mdi:sword-cross',
-      },
-      {
-        name: 'Game Design',
-        icon: 'mdi:controller-classic-outline',
-      },
-      {
-        name: 'Systems Design',
-        icon: 'mdi:sitemap-outline',
-      },
-      {
-        name: 'Balancing',
-        icon: 'mdi:scale-balance',
-      },
-      {
-        name: 'Prototyping',
-        icon: 'mdi:test-tube',
-      },
+      { name: 'RPG Maker MZ', icon: 'mdi:sword-cross' },  
+      { name: 'Systems Design', icon: 'mdi:sitemap-outline' },
     ],
   },
 
   {
     title: 'Tools & Misc',
     skills: [
-      {
-        name: 'VSCodium',
-        icon: 'mdi:code-braces',
-      },
-      {
-        name: 'Figma',
-        icon: 'logos:figma',
-      },
-      {
-        name: 'Technical Documentation',
-        icon: 'mdi:file-document-outline',
-      },
-      {
-        name: 'Agile Workflows',
-        icon: 'mdi:sync',
-      },
-      {
-        name: 'Problem Solving',
-        icon: 'mdi:lightbulb-outline',
-      },
+      { name: 'VS Code', icon: 'logos:visual-studio-code' },
+      { name: 'Figma', icon: 'logos:figma' },
+      { name: 'Postman', icon: 'logos:postman-icon' },
+      { name: 'Swagger', icon: 'logos:swagger' },
+      { name: 'Technical Documentation', icon: 'mdi:file-document-outline' },
+      { name: 'Debugging', icon: 'mdi:bug-outline' },
+      { name: 'Code Review', icon: 'mdi:source-pull' },
+      { name: 'Agile Workflows', icon: 'mdi:sync' },
     ],
   },
 ]
