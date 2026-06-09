@@ -129,8 +129,7 @@
       </div>
 
       <p class="tech-footer">
-        For a complete breakdown of technologies, tools, and domains, visit the
-        Skills page at Home.
+        For a complete breakdown of technologies, tools, and domains, explore the Skills section on the home page.
       </p>
     </section>
 
@@ -215,22 +214,26 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <style scoped>
+/* =========================
+   Layout
+   ========================= */
+
 .about-view {
   width: min(1200px, 90%);
   margin: 0 auto;
   padding: 6rem 0;
 }
 
-.hero {
+.content-section {
   margin-bottom: 6rem;
 }
 
-.section-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  opacity: 0.7;
-  margin-bottom: 1rem;
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+  margin-bottom: 6rem;
 }
 
 .hero h1 {
@@ -272,15 +275,26 @@ import { Icon } from '@iconify/vue'
   text-decoration: none;
   font-weight: 600;
   border: 1px solid currentColor;
-  transition: all 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .cv-button:hover {
   transform: translateY(-2px);
+  opacity: 0.85;
 }
 
-.content-section {
-  margin-bottom: 6rem;
+/* =========================
+   Shared Section Styles
+   ========================= */
+
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  margin-bottom: 1rem;
 }
 
 .section-header {
@@ -290,6 +304,10 @@ import { Icon } from '@iconify/vue'
 .section-header h2 {
   font-size: 2rem;
 }
+
+/* =========================
+   Cards & Grids
+   ========================= */
 
 .stats-grid,
 .tech-grid,
@@ -305,7 +323,7 @@ import { Icon } from '@iconify/vue'
   padding: 1.5rem;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .stat-card:hover,
@@ -316,24 +334,43 @@ import { Icon } from '@iconify/vue'
 
 .stat-icon,
 .interest-card span {
-  font-size: 2rem;
   display: block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* =========================
+   Technologies
+   ========================= */
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card h3 {
   margin-bottom: 1rem;
 }
 
-.tags {
+.skill-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 1rem;
 }
 
-.tag {
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.skill-icons :deep(svg) {
+  font-size: 2.25rem;
 }
+
+.tech-footer {
+  margin-top: 2rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* =========================
+   Timeline
+   ========================= */
 
 .timeline {
   display: flex;
@@ -348,41 +385,19 @@ import { Icon } from '@iconify/vue'
 
 .timeline-year {
   display: block;
-  font-weight: 700;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .timeline-item p {
   margin: 0;
-  opacity: 0.85;
   line-height: 1.7;
+  opacity: 0.85;
 }
 
-.skill-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.skill-icons :deep(svg) {
-  font-size: 2.25rem;
-}
-
-.tech-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.tech-card h3 {
-  margin-bottom: 1rem;
-}
-
-.tech-footer {
-  margin-top: 2rem;
-  opacity: 0.7;
-  text-align: center;
-}
+/* =========================
+   Responsive
+   ========================= */
 
 @media (max-width: 768px) {
   .about-view {
