@@ -64,54 +64,74 @@
     <section class="content-section">
       <div class="section-header">
         <p class="section-label">TECHNOLOGIES</p>
-        <h2>Tools I work with.</h2>
+        <h2>Core technologies.</h2>
       </div>
-
+    
       <div class="tech-grid">
         <div class="tech-card">
           <h3>Frontend</h3>
-
-          <div class="tags">
-            <span class="tag">Vue 3</span>
-            <span class="tag">Angular</span>
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Vuetify</span>
+        
+          <div class="skill-icons">
+            <Icon icon="logos:vue" />
+            <Icon icon="logos:angular-icon" />
+            <Icon icon="logos:react" />
+            <Icon icon="logos:typescript-icon" />
+            <Icon icon="logos:vuetifyjs" />
+            <Icon icon="logos:vitejs" />
           </div>
         </div>
-
+      
         <div class="tech-card">
           <h3>Backend</h3>
-
-          <div class="tags">
-            <span class="tag">PHP</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">.NET</span>
-            <span class="tag">REST APIs</span>
+        
+          <div class="skill-icons">
+            <Icon icon="logos:dotnet" />
+            <Icon icon="logos:php" />
+            <Icon icon="logos:nodejs-icon" />
+            <Icon icon="logos:fastapi-icon" />
+            <Icon icon="mdi:api" />
           </div>
         </div>
-
+      
         <div class="tech-card">
           <h3>Databases</h3>
-
-          <div class="tags">
-            <span class="tag">MySQL</span>
-            <span class="tag">SQL Server</span>
+        
+          <div class="skill-icons">
+            <Icon icon="logos:postgresql" />
+            <Icon icon="logos:mysql" />
+            <Icon icon="logos:mongodb-icon" />
+            <Icon icon="mdi:database-cog" />
           </div>
         </div>
-
+      
         <div class="tech-card">
-          <h3>Tools</h3>
-
-          <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">Linux</span>
-            <span class="tag">VSCodium</span>
+          <h3>DevOps</h3>
+        
+          <div class="skill-icons">
+            <Icon icon="logos:git-icon" />
+            <Icon icon="logos:github-icon" />
+            <Icon icon="logos:github-actions" />
+            <Icon icon="logos:gitlab-icon" />
+            <Icon icon="logos:netlify" />
+          </div>
+        </div>
+      
+        <div class="tech-card">
+          <h3>Engineering Tools</h3>
+        
+          <div class="skill-icons">
+            <Icon icon="logos:visual-studio-code" />
+            <Icon icon="logos:figma" />
+            <Icon icon="logos:postman-icon" />
+            <Icon icon="logos:swagger" />
           </div>
         </div>
       </div>
+
+      <p class="tech-footer">
+        For a complete breakdown of technologies, tools, and domains, visit the
+        Skills page at Home.
+      </p>
     </section>
 
     <section class="content-section">
@@ -189,6 +209,10 @@
     </section>
   </main>
 </template>
+
+<script lang="ts" setup>
+import { Icon } from '@iconify/vue'
+</script>
 
 <style scoped>
 .about-view {
@@ -332,6 +356,32 @@
   margin: 0;
   opacity: 0.85;
   line-height: 1.7;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-icons :deep(svg) {
+  font-size: 2.25rem;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card h3 {
+  margin-bottom: 1rem;
+}
+
+.tech-footer {
+  margin-top: 2rem;
+  opacity: 0.7;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

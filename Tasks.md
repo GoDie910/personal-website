@@ -16,8 +16,7 @@
 
 ### AboutMeView
 
-- Design and develop the About Me page
-- reuse the technologies wheel from landing here
+- "visit the Skills page at Home." must be link to the Landing's Skills section
 
 ### ProjectsView
 
