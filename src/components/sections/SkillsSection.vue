@@ -101,9 +101,9 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Git', icon: 'logos:git-icon' },
       { name: 'GitHub', icon: 'logos:github-icon' },
-      { name: 'GitHub Actions', icon: 'logob-icon' },
-      { name: 'Netlify', icon: 'logos:netls:github-actions' },
-      { name: 'GitLab', icon: 'logos:gitlaify' },
+      { name: 'GitHub Actions', icon: 'logos:github-actions' },
+      { name: 'GitLab', icon: 'logos:gitlab-icon' },
+      { name: 'Netlify', icon: 'logos:netlify' },
       { name: 'Vitest', icon: 'logos:vitest' },
       { name: 'CI/CD', icon: 'mdi:source-branch-sync' },
       { name: 'Deployment', icon: 'mdi:rocket-launch-outline' },
