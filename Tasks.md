@@ -4,12 +4,6 @@
 
 - you go to a page -> you scroll down -> you go to another page, you start already scrolled down. you should start at the top.
 
-## Landing
-
-### Skills Section
-
-- get icons for gsap and pixi
-
 ## Views / Pages
 
 ### AboutMeView

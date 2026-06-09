@@ -24,8 +24,16 @@
         :key="skill.name"
         class="technology-item"
       >
+        <template v-if="skill.image">
+          <img
+            :src="skill.image"
+            :alt="skill.name"
+            class="technology-icon technology-image"
+          >
+        </template>
         <Icon
-          :icon="skill.icon"
+          v-else
+          :icon="skill.icon!"
           class="technology-icon"
         />
         
@@ -40,10 +48,13 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { Icon } from '@iconify/vue'
+import gsapLogo from '@/assets/gsap.svg'
+import pixiLogo from '@/assets/pixijs.svg'
 
 type Skill = {
   name: string
-  icon: string
+  icon?: string
+  image?: string
 }
 
 type SkillCategory = {
@@ -64,8 +75,8 @@ const skillCategories: SkillCategory[] = [
       { name: 'CSS', icon: 'logos:css-3' },
       { name: 'Responsive Design', icon: 'mdi:monitor-cellphone' },
       { name: 'UI Architecture', icon: 'mdi:view-dashboard-outline' },
-      { name: 'GSAP', icon: 'simple-icons:gsap' },
-      { name: 'PixiJS', icon: 'mdi:vector-polygon' },
+      { name: 'GSAP', image: gsapLogo },
+      { name: 'PixiJS', image: pixiLogo },
       { name: 'Vuetify', icon: 'logos:vuetifyjs' },
       { name: 'Vite', icon: 'logos:vitejs' },
       { name: 'Pinia', icon: 'logos:pinia' },
@@ -247,6 +258,14 @@ h2 {
 
 .technology-item:hover {
   transform: translateY(-4px);
+}
+
+.technology-image {
+  width: clamp(3rem, 5vw, 4.5rem);
+
+  height: clamp(3rem, 5vw, 4.5rem);
+
+  object-fit: contain;
 }
 
 .technology-icon {
