@@ -35,18 +35,6 @@ export const projects: Project[] = [
   },
 
   {
-    title: 'Jormun',
-    featured: true,
-    categories: ['Games', 'Game Jam', 'Narrative'],
-    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80',
-    description:
-      'A narrative-focused game jam project exploring storytelling, atmosphere, and player immersion.',
-    technologies: ['Godot'],
-    github: '',
-    demo: 'https://godie910.itch.io/jormun',
-  },
-
-  {
     title: 'Goblin Game',
     featured: false,
     categories: ['Games', 'RPG', 'Narrative'],
@@ -59,14 +47,26 @@ export const projects: Project[] = [
   },
 
   {
-    title: 'Experimental Projects',
-    featured: false,
-    categories: ['Games', 'Prototypes', 'Research'],
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80',
+    title: 'JÖRMUN',
+    featured: true,
+    categories: ['Games', 'Game Jam', 'Narrative'],
+    image: 'https://img.itch.zone/aW1nLzIyNTAzMDEyLmpwZw==/original/C%2FJdqe.jpg',
     description:
-      'A collection of prototypes and technical experiments focused on gameplay systems, progression, AI behavior, and player interaction.',
-    technologies: ['Godot', 'Unity', 'RPG Maker'],
+      'A collaborative GMTK Game Jam project built with a small team. A Norse mythology-inspired infinite runner where Thor confronts Jörmun during Ragnarok in a looping world mechanic.',
+    technologies: ['Godot'],
     github: '',
-    demo: '',
+    demo: 'https://godie910.itch.io/jormun',
+  },
+
+  {
+    title: 'Depths of Avarice',
+    featured: true,
+    categories: ['Games', 'Game Jam', 'Strategy'],
+    image: 'https://img.itch.zone/aW1nLzIyOTYzNDA4LmpwZw==/original/GTKZlm.jpg',
+    description:
+      'A collaborative Brackeys Game Jam project about a greedy goblin venturing deeper into a dragon’s lair, balancing risk and reward in pursuit of treasure.',
+    technologies: ['Godot'],
+    github: '',
+    demo: 'https://black-pill.itch.io/depths-of-avarice',
   },
 ]
