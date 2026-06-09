@@ -1,5 +1,5 @@
 <template>
-  <section class="skills-section">
+  <section id="skills-section" class="skills-section">
     <div class="section-header">
       <p class="section-label">SKILLS</p>
 

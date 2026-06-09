@@ -2,10 +2,6 @@
 
 ## Views / Pages
 
-### AboutMeView
-
-- "visit the Skills page at Home." must be link to the Landing's Skills section
-
 ### ContactView
 
 - make it so the cv is downloaded different depending on the display language

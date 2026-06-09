@@ -152,7 +152,10 @@
       </div>
 
       <p class="tech-footer">
-        For a complete breakdown of technologies, tools, and domains, explore the Skills section on the home page.
+        For a complete breakdown of technologies, tools, and domains, explore the
+        <RouterLink to="/#skills-section">
+          Skills section on the home page
+        </RouterLink>
       </p>
     </section>
 
@@ -246,6 +249,7 @@
 
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped>
