@@ -1,21 +1,24 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const links = [
   {
-    name: 'Home',
+    name: t('nav-bar.links.home'),
     path: '/',
   },
   {
-    name: 'Projects',
+    name: t('nav-bar.links.projects'),
     path: '/projects',
   },
   {
-    name: 'About Me',
+    name: t('nav-bar.links.about'),
     path: '/about',
   },
   {
-    name: 'Contact',
+    name: t('nav-bar.links.contact'),
     path: '/contact',
   },
 ]
