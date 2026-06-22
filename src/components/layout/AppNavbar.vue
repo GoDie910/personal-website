@@ -1,25 +1,26 @@
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+  import { RouterLink } from 'vue-router'
+  import LanguageSelector from '../navigation/LanguageSelector.vue';
 
-const links = [
-  {
-    name: 'Home',
-    path: '/',
-  },
-  {
-    name: 'Projects',
-    path: '/projects',
-  },
-  {
-    name: 'About Me',
-    path: '/about',
-  },
-  {
-    name: 'Contact',
-    path: '/contact',
-  },
-]
+  const links = [
+    {
+      name: 'Home',
+      path: '/',
+    },
+    {
+      name: 'Projects',
+      path: '/projects',
+    },
+    {
+      name: 'About Me',
+      path: '/about',
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+    },
+  ]
 </script>
 
 <template>
@@ -31,6 +32,8 @@ const links = [
       >
         DBA
       </RouterLink>
+
+      <LanguageSelector></LanguageSelector>
 
       <nav class="nav-links">
         <RouterLink
