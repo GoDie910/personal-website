@@ -4,7 +4,7 @@ import en from './en/index'
 import es from './es/index'
 import pt from './pt/index'
 
-export const locales: Locale[] = ['en', 'es', 'pt']
+export const locales: Locale[] = ['es', 'en', 'pt']
 
 export default createI18n({
   legacy: false,
