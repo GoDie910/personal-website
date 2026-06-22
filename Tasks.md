@@ -1,15 +1,11 @@
 # Personal Website — Tasks
 
+- display my name
+- display picture
+
 ## Internationalization (i18n)
 
-- Add multilingual support
-- Default language: English
-- Add translations for:
-  - Spanish (`es`)
-  - Portuguese (`pt`)
-
-- Create a language switcher component
-- Store translations in modular locale files
+- Make the translations for each component
 
 ## Views / Pages
 
@@ -34,6 +30,7 @@
 
 ## Future Ideas
 
+- Update each project's links with working ones
 - Dark mode polish
 - Animations and transitions
 - SEO improvements
