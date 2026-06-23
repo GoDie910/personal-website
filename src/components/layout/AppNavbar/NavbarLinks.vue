@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const links = [
+const links = computed(() => [
   {
     name: t('nav-bar.links.home'),
     path: '/',
@@ -21,7 +22,7 @@ const links = [
     name: t('nav-bar.links.contact'),
     path: '/contact',
   },
-]
+])
 </script>
 
 <template>
