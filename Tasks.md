@@ -2,6 +2,7 @@
 
 - display my name
 - display picture
+- move all types to types fodler
 
 ## Internationalization (i18n)
 
