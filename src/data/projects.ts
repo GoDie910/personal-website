@@ -4,58 +4,65 @@ export const projects: Project[] = [
   {
     title: 'Trainimize',
     featured: true,
-    categories: ['Software', 'Fitness', 'Web Application'],
+    categories: [
+      'projects.categories.web-application',
+      'projects.categories.fullstack',
+      'projects.categories.fitness',
+    ],
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80',
-    description:
-      'A fitness tracking platform focused on logging workouts, exercises, sets, and repetitions while providing analytics and progress tracking.',
-    technologies: ['Vue', 'TypeScript'],
+    description: 'projects.trainimize.description',
+    technologies: ['Vue 3', 'TypeScript', 'FastAPI', 'Python'],
     github: '',
     demo: '',
   },
-
   {
     title: 'Tinnitus',
     featured: true,
-    categories: ['Software', 'Healthcare', 'Web Application'],
+    categories: [
+      'projects.categories.web-application',
+      'projects.categories.fullstack',
+      'projects.categories.healthcare',
+    ],
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80',
-    description:
-      'A medical platform supporting tinnitus treatment through patient management, scheduling, communication, and therapy tools.',
-    technologies: ['Vue'],
+    description: 'projects.tinnitus.description',
+    technologies: ['Vue 3', 'TypeScript', 'ASP.NET Core', 'C#'],
     github: '',
     demo: '',
   },
-
   {
     title: 'Goblin Game',
     featured: false,
-    categories: ['Games', 'RPG', 'Narrative'],
+    categories: ['projects.categories.games', 'projects.categories.rpg'],
     image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80',
-    description:
-      'An RPG Maker project centered around progression systems, world-building, and role-playing mechanics.',
+    description: 'projects.goblin.description',
     technologies: ['RPG Maker'],
     github: 'https://github.com/GoDie910/test-rmmz-ggg',
     demo: '',
   },
-
   {
     title: 'JÖRMUN',
     featured: true,
-    categories: ['Games', 'Game Jam', 'Narrative'],
+    categories: [
+      'projects.categories.games',
+      'projects.categories.game-jam',
+      'projects.categories.platformer',
+    ],
     image: 'https://img.itch.zone/aW1nLzIyNTAzMDEyLmpwZw==/original/C%2FJdqe.jpg',
-    description:
-      'A collaborative GMTK Game Jam project built with a small team. A Norse mythology-inspired infinite runner where Thor confronts Jörmun during Ragnarok in a looping world mechanic.',
+    description: 'projects.jormun.description',
     technologies: ['Godot'],
     github: '',
     demo: 'https://godie910.itch.io/jormun',
   },
-
   {
     title: 'Depths of Avarice',
     featured: true,
-    categories: ['Games', 'Game Jam', 'Strategy'],
+    categories: [
+      'projects.categories.games',
+      'projects.categories.game-jam',
+      'projects.categories.roguelike',
+    ],
     image: 'https://img.itch.zone/aW1nLzIyOTYzNDA4LmpwZw==/original/GTKZlm.jpg',
-    description:
-      'A collaborative Brackeys Game Jam project about a greedy goblin venturing deeper into a dragon’s lair, balancing risk and reward in pursuit of treasure.',
+    description: 'projects.avarice.description',
     technologies: ['Godot'],
     github: '',
     demo: 'https://black-pill.itch.io/depths-of-avarice',
