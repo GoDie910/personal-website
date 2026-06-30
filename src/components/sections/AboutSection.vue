@@ -1,62 +1,37 @@
 <template>
   <section class="about-section">
     <div class="section-header">
-      <p class="section-label">ABOUT</p>
+      <p class="section-label">
+        {{ t('landing.about.label') }}
+      </p>
 
-      <h2>Building software from interface to deployment.</h2>
+      <h2>
+        {{ t('landing.about.title') }}
+      </h2>
     </div>
 
     <div class="about-list">
-      <div class="about-item">
+      <div
+        v-for="(item, index) in aboutItems"
+        :key="index"
+        class="about-item"
+      >
         <span class="about-icon">✓</span>
 
-        <p>
-          Frontend development with Vue 3, TypeScript, and modern UI architecture.
-        </p>
-      </div>
-
-      <div class="about-item">
-        <span class="about-icon">✓</span>
-
-        <p>
-          Backend development with PHP, Node.js, REST APIs, and business systems.
-        </p>
-      </div>
-
-      <div class="about-item">
-        <span class="about-icon">✓</span>
-
-        <p>
-          Database design and maintenance using MySQL and relational data models.
-        </p>
-      </div>
-
-      <div class="about-item">
-        <span class="about-icon">✓</span>
-
-        <p>
-          Responsive interfaces focused on usability, accessibility, and performance.
-        </p>
-      </div>
-
-      <div class="about-item">
-        <span class="about-icon">✓</span>
-
-        <p>
-          Experience building dashboards, administrative tools, and financial platforms.
-        </p>
-      </div>
-
-      <div class="about-item">
-        <span class="about-icon">✓</span>
-
-        <p>
-          Personal projects in game development, systems design, and interactive experiences.
-        </p>
+        <p>{{ item }}</p>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+  import { computed } from 'vue'
+  import { useI18n } from 'vue-i18n'
+
+  const { t, tm } = useI18n()
+
+  const aboutItems = computed(() => tm('landing.about.items') as string[])
+</script>
 
 <style scoped>
 .about-section {
