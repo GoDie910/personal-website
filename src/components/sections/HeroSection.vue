@@ -1,43 +1,53 @@
-<script setup lang="ts">
-const scrollToProjects = () => {
-  const section = document.getElementById('featured-projects')
-
-  if (section) {
-    section.scrollIntoView({
-      behavior: 'smooth',
-    })
-  }
-}
-</script>
-
 <template>
   <section class="hero-section">
     <div class="hero-content">
-      <p class="hero-label">SOFTWARE ENGINEER</p>
+      <p class="hero-label">
+        {{ t('landing.hero.label') }}
+      </p>
 
       <h1>
-        Building systems,<br />
-        interfaces,<br />
-        and interactive experiences.
+        {{ t('landing.hero.title.line1') }}<br />
+        {{ t('landing.hero.title.line2') }}<br />
+        {{ t('landing.hero.title.line3') }}
       </h1>
 
       <p class="hero-description">
-        Frontend developer focused on Vue 3, UI architecture, dashboards, and game-inspired
-        experiences.
+        {{ t('landing.hero.description') }}
       </p>
 
       <div class="hero-actions">
         <button class="primary-button" @click="scrollToProjects">
-          View Projects
+          {{ t('landing.hero.actions.viewProjects') }}
         </button>
 
-        <a class="github-cta" href="https://github.com/GoDie910" target="_blank" rel="noopener">
-          GitHub
+        <a
+          class="github-cta"
+          href="https://github.com/GoDie910"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ t('landing.hero.actions.github') }}
         </a>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
+  
+  const scrollToProjects = () => {
+    const section = document.getElementById('featured-projects')
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+      })
+    }
+  }
+</script>
 
 <style scoped>
 .hero-section {
