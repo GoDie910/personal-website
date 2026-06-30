@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import ProjectCard from '@/components/projects/ProjectCard.vue'
-import { projects } from '@/assets/projects'
-
-const featuredProjects = projects.filter(
-  project => project.featured,
-)
-</script>
-
 <template>
   <section
     id="featured-projects"
@@ -27,6 +18,15 @@ const featuredProjects = projects.filter(
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+  import ProjectCard from '@/components/projects/ProjectCard.vue'
+  import { projects } from '@/data/projects'
+  
+  const featuredProjects = projects.filter(
+    project => project.featured,
+  )
+</script>
 
 <style scoped>
 .projects-section {

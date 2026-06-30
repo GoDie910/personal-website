@@ -6,3 +6,6 @@ export type { Theme } from './config/theme'
 // ----- SKILLS -----
 export type { Skill } from './skills/Skill'
 export type { SkillCategory } from './skills/SkillCategory'
+
+// ----- PROJECTS -----
+export type { Project } from './projects/Project'

@@ -42,11 +42,11 @@
 </template>
 
 <script setup lang="ts">
-import { type Project } from '@/assets/projects';
-
-defineProps<{
-  project: Project
-}>()
+  import type { Project } from '@/types'
+  
+  defineProps<{
+    project: Project
+  }>()
 </script>
 
 <style scoped>

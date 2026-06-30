@@ -37,27 +37,27 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import ProjectCard from '@/components/projects/ProjectCard.vue'
-import { projects } from '@/assets/projects'
-
-const projectCategories = new Set(
-  projects.flatMap(project => project.categories),
-)
-
-const filters = ['All', ...projectCategories]
-
-const selectedFilter = ref('All')
-
-const filteredProjects = computed(() => {
-  if (selectedFilter.value === 'All') {
-    return projects
-  }
-
-  return projects.filter(project =>
-    project.categories.includes(selectedFilter.value),
+  import { computed, ref } from 'vue'
+  import ProjectCard from '@/components/projects/ProjectCard.vue'
+  import { projects } from '@/data/projects'
+  
+  const projectCategories = new Set(
+    projects.flatMap(project => project.categories),
   )
-})
+  
+  const filters = ['All', ...projectCategories]
+  
+  const selectedFilter = ref('All')
+  
+  const filteredProjects = computed(() => {
+    if (selectedFilter.value === 'All') {
+      return projects
+    }
+  
+    return projects.filter(project =>
+      project.categories.includes(selectedFilter.value),
+    )
+  })
 </script>
 
 <style scoped>
