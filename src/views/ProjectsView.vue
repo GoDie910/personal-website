@@ -1,14 +1,12 @@
 <template>
   <main class="projects-view">
     <section class="hero">
-      <p class="section-label">PROJECTS</p>
+      <p class="section-label">{{ t('projects.label') }}</p>
 
-      <h1>Things I've built.</h1>
+      <h1>{{ t('projects.title') }}</h1>
 
       <p class="hero-description">
-        A collection of software products, web applications, and game
-        development projects focused on creating useful and engaging
-        experiences.
+        {{ t('projects.description') }}
       </p>
     </section>
 

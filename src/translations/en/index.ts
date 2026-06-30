@@ -5,6 +5,7 @@ import skills from './skills'
 import contact from './contact'
 import aboutMe from './about-me'
 import project from './project'
+import projects from './projects'
 
 export default {
   dev,
@@ -14,4 +15,5 @@ export default {
   contact,
   'about-me': aboutMe,
   project,
+  projects,
 }
