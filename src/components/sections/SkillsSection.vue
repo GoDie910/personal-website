@@ -12,13 +12,13 @@
 
     <div class="category-tabs">
       <button
-        v-for="(category, index) in skillCategories"
+        v-for="category in skillCategories"
         :key="category.title"
         class="category-pill"
-        :class="{ active: selectedCategory === index }"
-        @click="selectedCategory = index"
+        :class="{ active: selectedCategory === category.title }"
+        @click="selectedCategory = category.title"
       >
-        {{ category.title }}
+        {{ t(category.title) }}
       </button>
     </div>
 
@@ -50,111 +50,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { Icon } from '@iconify/vue'
-import gsapLogo from '@/assets/gsap.svg'
-import pixiLogo from '@/assets/pixijs.svg'
+  import { computed, ref } from 'vue'
+  import { Icon } from '@iconify/vue'
+  import { useI18n } from 'vue-i18n'
+  import { skillCategories } from '@/data/skills'
 
-type Skill = {
-  name: string
-  icon?: string
-  image?: string
-}
+  const { t } = useI18n()
 
-type SkillCategory = {
-  title: string
-  skills: Skill[]
-}
-
-const skillCategories: SkillCategory[] = [
-  {
-    title: 'Frontend',
-    skills: [
-      { name: 'Vue 3', icon: 'logos:vue' },
-      { name: 'Angular', icon: 'logos:angular-icon' },
-      { name: 'React', icon: 'logos:react' },
-      { name: 'TypeScript', icon: 'logos:typescript-icon' },
-      { name: 'JavaScript', icon: 'logos:javascript' },
-      { name: 'HTML5', icon: 'logos:html-5' },
-      { name: 'CSS', icon: 'logos:css-3' },
-      { name: 'Responsive Design', icon: 'mdi:monitor-cellphone' },
-      { name: 'UI Architecture', icon: 'mdi:view-dashboard-outline' },
-      { name: 'GSAP', image: gsapLogo },
-      { name: 'PixiJS', image: pixiLogo },
-      { name: 'Vuetify', icon: 'logos:vuetifyjs' },
-      { name: 'Vite', icon: 'logos:vitejs' },
-      { name: 'Pinia', icon: 'logos:pinia' },
-    ],
-  },
-
-  {
-    title: 'Backend',
-    skills: [
-      { name: 'Node.js', icon: 'logos:nodejs-icon' },
-      { name: 'FastAPI', icon: 'logos:fastapi-icon' },
-      { name: 'ASP.NET Core', icon: 'logos:dotnet' },
-      { name: 'PHP', icon: 'logos:php' },
-      { name: 'REST APIs', icon: 'mdi:api' },
-      { name: 'WebSockets', icon: 'mdi:connection' },
-      { name: 'Authentication', icon: 'mdi:shield-lock-outline' },
-      { name: 'Business Logic', icon: 'mdi:cog-outline' },
-    ],
-  },
-
-  {
-    title: 'Databases',
-    skills: [
-      { name: 'PostgreSQL', icon: 'logos:postgresql' },
-      { name: 'MySQL', icon: 'logos:mysql' },
-      { name: 'SQL Server', icon: 'mdi:database-cog' },
-      { name: 'MongoDB', icon: 'logos:mongodb-icon' },
-    ],
-  },
-
-  {
-    title: 'DevOps',
-    skills: [
-      { name: 'Git', icon: 'logos:git-icon' },
-      { name: 'GitHub', icon: 'logos:github-icon' },
-      { name: 'GitHub Actions', icon: 'logos:github-actions' },
-      { name: 'GitLab', icon: 'logos:gitlab-icon' },
-      { name: 'Netlify', icon: 'logos:netlify' },
-      { name: 'Vitest', icon: 'logos:vitest' },
-      { name: 'CI/CD', icon: 'mdi:source-branch-sync' },
-      { name: 'Deployment', icon: 'mdi:rocket-launch-outline' },
-    ],
-  },
-
-  {
-    title: 'Game Dev',
-    skills: [
-      { name: 'Godot', icon: 'logos:godot-icon' },
-      { name: 'Unity', icon: 'logos:unity' },
-      { name: 'RPG Maker MZ', icon: 'mdi:sword-cross' },  
-      { name: 'Systems Design', icon: 'mdi:sitemap-outline' },
-    ],
-  },
-
-  {
-    title: 'Tools & Misc',
-    skills: [
-      { name: 'VS Code', icon: 'logos:visual-studio-code' },
-      { name: 'Figma', icon: 'logos:figma' },
-      { name: 'Postman', icon: 'logos:postman-icon' },
-      { name: 'Swagger', icon: 'logos:swagger' },
-      { name: 'Technical Documentation', icon: 'mdi:file-document-outline' },
-      { name: 'Debugging', icon: 'mdi:bug-outline' },
-      { name: 'Code Review', icon: 'mdi:source-pull' },
-      { name: 'Agile Workflows', icon: 'mdi:sync' },
-    ],
-  },
-]
-
-const selectedCategory = ref(0)
-
-const currentCategory = computed(
-  () => skillCategories[selectedCategory.value]!,
-)
+  const selectedCategory = ref(skillCategories[0]?.title)
+  const currentCategory = computed(() =>
+    skillCategories.find(c => c.title === selectedCategory.value)!
+  )
 </script>
 
 <style scoped>
