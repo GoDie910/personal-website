@@ -4,7 +4,7 @@ import landing from './landing'
 import skills from './skills'
 import contact from './contact'
 import aboutMe from './about-me'
-import projects from './projects'
+import project from './project'
 
 export default {
   dev,
@@ -13,5 +13,5 @@ export default {
   skills,
   contact,
   'about-me': aboutMe,
-  projects,
+  project,
 }
