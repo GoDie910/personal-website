@@ -29,4 +29,8 @@ export default {
     label: 'SKILLS',
     title: 'Technologies, tools, and domains I work with.',
   },
+  projects: {
+    label: 'PROJECTS',
+    title: 'Selected work and experiments.',
+  },
 }

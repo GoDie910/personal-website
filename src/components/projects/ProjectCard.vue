@@ -8,7 +8,7 @@
 
     <h3>{{ project.title }}</h3>
 
-    <p>{{ project.description }}</p>
+    <p>{{ t(project.description) }}</p>
 
     <div class="project-tags">
       <span
@@ -43,6 +43,9 @@
 
 <script setup lang="ts">
   import type { Project } from '@/types'
+  import { useI18n } from 'vue-i18n';
+
+  const { t } = useI18n()
   
   defineProps<{
     project: Project

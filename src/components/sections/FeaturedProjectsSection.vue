@@ -4,9 +4,9 @@
     class="projects-section"
   >
     <div class="section-header">
-      <p class="section-label">PROJECTS</p>
+      <p class="section-label">{{ t('landing.projects.label') }}</p>
 
-      <h2>Selected work and experiments.</h2>
+      <h2>{{ t('landing.projects.title') }}</h2>
     </div>
 
     <div class="projects-grid">
@@ -22,6 +22,9 @@
 <script setup lang="ts">
   import ProjectCard from '@/components/projects/ProjectCard.vue'
   import { projects } from '@/data/projects'
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
   
   const featuredProjects = projects.filter(
     project => project.featured,

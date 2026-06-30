@@ -29,4 +29,8 @@ export default {
     label: 'HABILIDADES',
     title: 'Tecnologias, ferramentas e áreas com as quais trabalho.',
   },
+  projects: {
+    label: 'PROJETOS',
+    title: 'Trabalhos e experimentos selecionados.',
+  },
 }
