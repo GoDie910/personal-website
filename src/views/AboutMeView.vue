@@ -1,29 +1,34 @@
 <template>
   <main class="about-view">
-    <section class="hero">
-      <p class="section-label">ABOUT ME</p>
 
-      <h1>Building software with curiosity and intention.</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <p class="section-label">
+        {{ t('about-me.hero.label') }}
+      </p>
+
+      <h1>
+        {{ t('about-me.hero.title') }}
+      </h1>
 
       <p class="hero-description">
-        Fullstack software engineer from Peru, building modern web applications,
-        business systems, and user-focused software solutions.
+        {{ t('about-me.hero.description') }}
       </p>
 
       <div class="hero-badges">
         <div class="badge">
           <Icon icon="mdi:map-marker-outline" />
-          <span>Peru</span>
+          <span>{{ t('about-me.hero.badges.location') }}</span>
         </div>
-      
+
         <div class="badge">
           <Icon icon="mdi:briefcase-outline" />
-          <span>Software Engineer</span>
+          <span>{{ t('about-me.hero.badges.role') }}</span>
         </div>
-      
+
         <div class="badge">
           <Icon icon="mdi:web" />
-          <span>Fullstack Developer</span>
+          <span>{{ t('about-me.hero.badges.type') }}</span>
         </div>
       </div>
 
@@ -34,66 +39,54 @@
           rel="noopener noreferrer"
           class="cv-button"
         >
-          Download CV
+          {{ t('about-me.hero.actions.downloadCv') }}
         </a>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">AT A GLANCE</p>
-        <h2>Quick overview.</h2>
-      </div>
-
+    <!-- OVERVIEW -->
+    <SectionBlock
+      :label="t('about-me.overview.label')"
+      :title="t('about-me.overview.title')"
+    >
       <div class="stats-grid">
+
         <div class="stat-card">
-          <Icon
-            icon="mdi:briefcase-outline"
-            class="stat-icon"
-          />
-          <h3>Experience</h3>
-          <p>Professional software development across multiple industries.</p>
+          <Icon icon="mdi:briefcase-outline" class="stat-icon" />
+          <h3>{{ t('about-me.overview.items.experience.title') }}</h3>
+          <p>{{ t('about-me.overview.items.experience.description') }}</p>
         </div>
 
         <div class="stat-card">
-          <Icon
-            icon="mdi:rocket-launch-outline"
-            class="stat-icon"
-          />
-          <h3>Projects</h3>
-          <p>Web applications, internal platforms, and personal products.</p>
+          <Icon icon="mdi:rocket-launch-outline" class="stat-icon" />
+          <h3>{{ t('about-me.overview.items.projects.title') }}</h3>
+          <p>{{ t('about-me.overview.items.projects.description') }}</p>
         </div>
 
         <div class="stat-card">
-          <Icon
-            icon="mdi:tools"
-            class="stat-icon"
-          />
-          <h3>Technology</h3>
-          <p>Frontend, backend, databases, and software architecture.</p>
+          <Icon icon="mdi:tools" class="stat-icon" />
+          <h3>{{ t('about-me.overview.items.technology.title') }}</h3>
+          <p>{{ t('about-me.overview.items.technology.description') }}</p>
         </div>
 
         <div class="stat-card">
-          <Icon
-            icon="mdi:office-building-cog-outline"
-            class="stat-icon"
-          />
-          <h3>Architecture</h3>
-          <p>Designing scalable, maintainable software systems and development workflows.</p>
+          <Icon icon="mdi:office-building-cog-outline" class="stat-icon" />
+          <h3>{{ t('about-me.overview.items.architecture.title') }}</h3>
+          <p>{{ t('about-me.overview.items.architecture.description') }}</p>
         </div>
+
       </div>
-    </section>
+    </SectionBlock>
 
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">TECHNOLOGIES</p>
-        <h2>Core technologies.</h2>
-      </div>
-    
+    <!-- TECHNOLOGIES -->
+    <SectionBlock
+      :label="t('about-me.technologies.label')"
+      :title="t('about-me.technologies.title')"
+    >
       <div class="tech-grid">
+
         <div class="tech-card">
-          <h3>Frontend</h3>
-        
+          <h3>{{ t('about-me.technologies.categories.frontend') }}</h3>
           <div class="skill-icons">
             <Icon icon="logos:vue" />
             <Icon icon="logos:angular-icon" />
@@ -103,10 +96,9 @@
             <Icon icon="logos:vitejs" />
           </div>
         </div>
-      
+
         <div class="tech-card">
-          <h3>Backend</h3>
-        
+          <h3>{{ t('about-me.technologies.categories.backend') }}</h3>
           <div class="skill-icons">
             <Icon icon="logos:dotnet" />
             <Icon icon="logos:php" />
@@ -115,10 +107,9 @@
             <Icon icon="mdi:api" />
           </div>
         </div>
-      
+
         <div class="tech-card">
-          <h3>Databases</h3>
-        
+          <h3>{{ t('about-me.technologies.categories.databases') }}</h3>
           <div class="skill-icons">
             <Icon icon="logos:postgresql" />
             <Icon icon="logos:mysql" />
@@ -126,10 +117,9 @@
             <Icon icon="mdi:database-cog" />
           </div>
         </div>
-      
+
         <div class="tech-card">
-          <h3>DevOps</h3>
-        
+          <h3>{{ t('about-me.technologies.categories.devops') }}</h3>
           <div class="skill-icons">
             <Icon icon="logos:git-icon" />
             <Icon icon="logos:github-icon" />
@@ -138,10 +128,9 @@
             <Icon icon="logos:netlify" />
           </div>
         </div>
-      
+
         <div class="tech-card">
-          <h3>Engineering Tools</h3>
-        
+          <h3>{{ t('about-me.technologies.categories.tools') }}</h3>
           <div class="skill-icons">
             <Icon icon="logos:visual-studio-code" />
             <Icon icon="logos:figma" />
@@ -149,107 +138,91 @@
             <Icon icon="logos:swagger" />
           </div>
         </div>
+
       </div>
 
       <p class="tech-footer">
-        For a complete breakdown of technologies, tools, and domains, explore the
+        {{ t('about-me.technologies.footer') }}
         <RouterLink to="/#skills-section">
           Skills section on the home page
         </RouterLink>
       </p>
-    </section>
+    </SectionBlock>
 
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">INTERESTS</p>
-        <h2>What keeps me learning.</h2>
-      </div>
-    
+    <!-- INTERESTS -->
+    <SectionBlock
+      :label="t('about-me.interests.label')"
+      :title="t('about-me.interests.title')"
+    >
       <div class="interests-grid">
-        <div class="interest-card">
-          <Icon
-            icon="mdi:palette-outline"
-            class="interest-icon"
-          />
-          <h3>User Experience</h3>
-          <p>
-            Creating interfaces that feel intuitive, accessible, and enjoyable to
-            use.
-          </p>
-        </div>
-      
-        <div class="interest-card">
-          <Icon
-            icon="mdi:cog-outline"
-            class="interest-icon"
-          />
-          <h3>Software Architecture</h3>
-          <p>
-            Exploring patterns and practices that improve maintainability and
-            scalability.
-          </p>
-        </div>
-      
-        <div class="interest-card">
-          <Icon
-            icon="mdi:laptop"
-            class="interest-icon"
-          />
-          <h3>Modern Web Technologies</h3>
-          <p>
-            Keeping up with frameworks, tooling, cloud services, and development
-            workflows.
-          </p>
-        </div>
-      
-        <div class="interest-card">
-          <Icon
-            icon="mdi:controller-classic-outline"
-            class="interest-icon"
-          />
-          <h3>Game Development</h3>
-          <p>
-            A personal hobby where I experiment with gameplay systems, RPG
-            mechanics, and interactive storytelling.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <section class="content-section">
-      <div class="section-header">
-        <p class="section-label">JOURNEY</p>
-        <h2>Career highlights.</h2>
-      </div>
+        <div class="interest-card">
+          <Icon icon="mdi:palette-outline" class="interest-icon" />
+          <h3>{{ t('about-me.interests.items.ux.title') }}</h3>
+          <p>{{ t('about-me.interests.items.ux.description') }}</p>
+        </div>
 
+        <div class="interest-card">
+          <Icon icon="mdi:cog-outline" class="interest-icon" />
+          <h3>{{ t('about-me.interests.items.architecture.title') }}</h3>
+          <p>{{ t('about-me.interests.items.architecture.description') }}</p>
+        </div>
+
+        <div class="interest-card">
+          <Icon icon="mdi:laptop" class="interest-icon" />
+          <h3>{{ t('about-me.interests.items.web.title') }}</h3>
+          <p>{{ t('about-me.interests.items.web.description') }}</p>
+        </div>
+
+        <div class="interest-card">
+          <Icon icon="mdi:controller-classic-outline" class="interest-icon" />
+          <h3>{{ t('about-me.interests.items.gamedev.title') }}</h3>
+          <p>{{ t('about-me.interests.items.gamedev.description') }}</p>
+        </div>
+
+      </div>
+    </SectionBlock>
+
+    <!-- JOURNEY -->
+    <SectionBlock
+      :label="t('about-me.journey.label')"
+      :title="t('about-me.journey.title')"
+    >
       <div class="timeline">
+
         <div class="timeline-item">
           <span class="timeline-year">2022</span>
-          <p>Started professional software development.</p>
+          <p>{{ t('about-me.journey.items["2022"]') }}</p>
         </div>
 
         <div class="timeline-item">
           <span class="timeline-year">2023</span>
-          <p>Worked on healthcare and business platforms.</p>
+          <p>{{ t('about-me.journey.items["2023"]') }}</p>
         </div>
 
         <div class="timeline-item">
           <span class="timeline-year">2024</span>
-          <p>Expanded into financial systems and frontend engineering.</p>
+          <p>{{ t('about-me.journey.items["2024"]') }}</p>
         </div>
 
         <div class="timeline-item">
           <span class="timeline-year">Today</span>
-          <p>Building modern web applications and personal game projects.</p>
+          <p>{{ t('about-me.journey.items.today') }}</p>
         </div>
+
       </div>
-    </section>
+    </SectionBlock>
+
   </main>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import SectionBlock from '@/components/about-me/SectionBlock.vue';
+
+const { t } = useI18n()
 </script>
 
 <style scoped>
