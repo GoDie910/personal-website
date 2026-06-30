@@ -25,4 +25,8 @@ export default {
       'Personal projects in game development, systems design, and interactive experiences.',
     ],
   },
+  skills: {
+    label: 'SKILLS',
+    title: 'Technologies, tools, and domains I work with.',
+  },
 }

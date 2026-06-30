@@ -25,4 +25,8 @@ export default {
       'Projetos pessoais em desenvolvimento de jogos, design de sistemas e experiências interativas.',
     ],
   },
+  skills: {
+    label: 'HABILIDADES',
+    title: 'Tecnologias, ferramentas e áreas com as quais trabalho.',
+  },
 }

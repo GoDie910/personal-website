@@ -1,9 +1,13 @@
 <template>
   <section id="skills-section" class="skills-section">
-    <div class="section-header">
-      <p class="section-label">SKILLS</p>
 
-      <h2>Technologies, tools, and domains I work with.</h2>
+    <div class="section-header">
+      <p class="section-label">
+        {{ t('landing.skills.label') }}
+      </p>
+      <h2>
+        {{ t('landing.skills.title') }}
+      </h2>
     </div>
 
     <div class="category-tabs">
