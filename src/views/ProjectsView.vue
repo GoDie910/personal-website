@@ -21,7 +21,7 @@
           :class="{ active: selectedFilter === filter }"
           @click="selectedFilter = filter"
         >
-          {{ filter }}
+          {{ t(filter) }}
         </button>
       </div>
     </section>
@@ -40,17 +40,21 @@
   import { computed, ref } from 'vue'
   import ProjectCard from '@/components/projects/ProjectCard.vue'
   import { projects } from '@/data/projects'
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
   
   const projectCategories = new Set(
     projects.flatMap(project => project.categories),
   )
   
-  const filters = ['All', ...projectCategories]
+  const filterAll = 'project.categories.all'
+  const filters = [filterAll, ...projectCategories]
   
-  const selectedFilter = ref('All')
+  const selectedFilter = ref(filterAll)
   
   const filteredProjects = computed(() => {
-    if (selectedFilter.value === 'All') {
+    if (selectedFilter.value === filterAll) {
       return projects
     }
   

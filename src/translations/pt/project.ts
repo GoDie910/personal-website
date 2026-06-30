@@ -1,5 +1,6 @@
 export default {
   categories: {
+    all: 'Todos',
     'web-application': 'Aplicação Web',
     fullstack: 'Fullstack',
     fitness: 'Fitness',
