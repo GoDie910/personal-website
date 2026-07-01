@@ -20,3 +20,13 @@ defineProps<{
   title?: string
 }>()
 </script>
+
+<style lang="css" scoped>
+  .content-section {
+    margin-bottom: 6rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+</style>
