@@ -38,13 +38,6 @@ export default {
   technologies: {
     label: 'TECHNOLOGIES',
     title: 'Core technologies.',
-    categories: {
-      frontend: 'Frontend',
-      backend: 'Backend',
-      databases: 'Databases',
-      devops: 'DevOps',
-      tools: 'Engineering Tools',
-    },
     footer:
       'For a complete breakdown of technologies, tools, and domains, explore the Skills section on the home page',
   },

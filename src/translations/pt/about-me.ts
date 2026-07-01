@@ -39,13 +39,6 @@ export default {
   technologies: {
     label: 'TECNOLOGIAS',
     title: 'Tecnologias principais.',
-    categories: {
-      frontend: 'Frontend',
-      backend: 'Backend',
-      databases: 'Bancos de dados',
-      devops: 'DevOps',
-      tools: 'Ferramentas de engenharia',
-    },
     footer:
       'Para ver o detalhamento completo de tecnologias, ferramentas e áreas, explore a seção Skills na página inicial',
   },

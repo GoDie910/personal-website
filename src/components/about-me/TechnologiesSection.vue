@@ -4,56 +4,34 @@
     :title="t('about-me.technologies.title')"
   >
     <div class="tech-grid">
-      <div class="tech-card">
-        <h3>{{ t('about-me.technologies.categories.frontend') }}</h3>
+      <div
+        v-for="category in displayedCategories"
+        :key="category.title"
+        class="tech-card"
+      >
+        <h3>{{ t(category.title) }}</h3>
+
         <div class="skill-icons">
-          <Icon icon="logos:vue" />
-          <Icon icon="logos:angular-icon" />
-          <Icon icon="logos:react" />
-          <Icon icon="logos:typescript-icon" />
-          <Icon icon="logos:vuetifyjs" />
-          <Icon icon="logos:vitejs" />
-        </div>
-      </div>
-      <div class="tech-card">
-        <h3>{{ t('about-me.technologies.categories.backend') }}</h3>
-        <div class="skill-icons">
-          <Icon icon="logos:dotnet" />
-          <Icon icon="logos:php" />
-          <Icon icon="logos:nodejs-icon" />
-          <Icon icon="logos:fastapi-icon" />
-          <Icon icon="mdi:api" />
-        </div>
-      </div>
-      <div class="tech-card">
-        <h3>{{ t('about-me.technologies.categories.databases') }}</h3>
-        <div class="skill-icons">
-          <Icon icon="logos:postgresql" />
-          <Icon icon="logos:mysql" />
-          <Icon icon="logos:mongodb-icon" />
-          <Icon icon="mdi:database-cog" />
-        </div>
-      </div>
-      <div class="tech-card">
-        <h3>{{ t('about-me.technologies.categories.devops') }}</h3>
-        <div class="skill-icons">
-          <Icon icon="logos:git-icon" />
-          <Icon icon="logos:github-icon" />
-          <Icon icon="logos:github-actions" />
-          <Icon icon="logos:gitlab-icon" />
-          <Icon icon="logos:netlify" />
-        </div>
-      </div>
-      <div class="tech-card">
-        <h3>{{ t('about-me.technologies.categories.tools') }}</h3>
-        <div class="skill-icons">
-          <Icon icon="logos:visual-studio-code" />
-          <Icon icon="logos:figma" />
-          <Icon icon="logos:postman-icon" />
-          <Icon icon="logos:swagger" />
+          <template
+            v-for="skill in category.skills"
+            :key="skill.name"
+          >
+            <Icon
+              v-if="skill.icon"
+              :icon="skill.icon"
+            />
+
+            <img
+              v-else-if="skill.image"
+              :src="skill.image"
+              :alt="skill.name"
+              class="skill-image"
+            />
+          </template>
         </div>
       </div>
     </div>
+
     <p class="tech-footer">
       {{ t('about-me.technologies.footer') }}
       <RouterLink to="/#skills-section">
@@ -67,9 +45,14 @@
   import { Icon } from '@iconify/vue'
   import { RouterLink } from 'vue-router'
   import { useI18n } from 'vue-i18n'
+
   import SectionBlock from './SectionBlock.vue'
+  import { skillCategories } from '@/data/skills'
   
   const { t } = useI18n()
+  
+  // Hide Game Dev if you don't want it here.
+  const displayedCategories = skillCategories
 </script>
 
 <style lang="css" scoped>
@@ -102,8 +85,10 @@
     gap:1rem;
   }
   
-  .skill-icons :deep(svg){
-    font-size:2.25rem;
+  .skill-icons :deep(svg),
+  .skill-image {
+    width: 2.25rem;
+    height: 2.25rem;
   }
   
   .tech-footer{
