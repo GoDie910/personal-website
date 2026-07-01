@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-</script>
-
 <template>
   <RouterLink
     to="/"
@@ -10,6 +6,10 @@ import { RouterLink } from 'vue-router'
     DBA
   </RouterLink>
 </template>
+
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
 
 <style scoped>
 .logo {

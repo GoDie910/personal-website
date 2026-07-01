@@ -1,3 +1,16 @@
+<template>
+  <nav class="nav-links">
+    <RouterLink
+      v-for="link in links"
+      :key="link.name"
+      :to="link.path"
+      class="nav-link"
+    >
+      {{ link.name }}
+    </RouterLink>
+  </nav>
+</template>
+
 <script setup lang="ts">
 import { computed } from 'vue';
 import { RouterLink } from 'vue-router'
@@ -24,19 +37,6 @@ const links = computed(() => [
   },
 ])
 </script>
-
-<template>
-  <nav class="nav-links">
-    <RouterLink
-      v-for="link in links"
-      :key="link.name"
-      :to="link.path"
-      class="nav-link"
-    >
-      {{ link.name }}
-    </RouterLink>
-  </nav>
-</template>
 
 <style scoped>
 .nav-links {

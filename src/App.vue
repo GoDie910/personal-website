@@ -1,3 +1,11 @@
+<template>
+  <div class="app">
+    <AppNavbar />
+
+    <RouterView />
+  </div>
+</template>
+
 <script setup lang="ts">
   import { watch } from 'vue'
   import { RouterView } from 'vue-router'
@@ -19,11 +27,3 @@
     { immediate: true },
   )
 </script>
-
-<template>
-  <div class="app">
-    <AppNavbar />
-
-    <RouterView />
-  </div>
-</template>

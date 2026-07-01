@@ -1,3 +1,45 @@
+<template>
+  <div
+    ref="dropdownRef"
+    class="language-selector"
+  >
+    <button
+      class="language-button"
+      type="button"
+      @click="isOpen = !isOpen"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        aria-hidden="true"
+      >
+        <path
+          :d="mdiTranslate"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+
+    <Transition name="dropdown">
+      <div
+        v-if="isOpen"
+        class="language-dropdown"
+      >
+        <button
+          v-for="lang in locales"
+          :key="lang"
+          class="language-option"
+          :class="{ active: locale === lang }"
+          @click="selectLanguage(lang)"
+        >
+          {{ lang.toUpperCase() }}
+        </button>
+      </div>
+    </Transition>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 
@@ -41,48 +83,6 @@ onBeforeUnmount(() => {
   document.removeEventListener('click', handleClickOutside)
 })
 </script>
-
-<template>
-  <div
-    ref="dropdownRef"
-    class="language-selector"
-  >
-    <button
-      class="language-button"
-      type="button"
-      @click="isOpen = !isOpen"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        width="20"
-        height="20"
-        aria-hidden="true"
-      >
-        <path
-          :d="mdiTranslate"
-          fill="currentColor"
-        />
-      </svg>
-    </button>
-
-    <Transition name="dropdown">
-      <div
-        v-if="isOpen"
-        class="language-dropdown"
-      >
-        <button
-          v-for="lang in locales"
-          :key="lang"
-          class="language-option"
-          :class="{ active: locale === lang }"
-          @click="selectLanguage(lang)"
-        >
-          {{ lang.toUpperCase() }}
-        </button>
-      </div>
-    </Transition>
-  </div>
-</template>
 
 <style scoped>
 .language-selector {

@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import LanguageSelector from './AppNavbar/LanguageSelector.vue'
-import NavbarBrand from './AppNavbar/NavbarBrand.vue'
-import NavbarLinks from './AppNavbar/NavbarLinks.vue'
-</script>
-
 <template>
   <header class="navbar">
     <div class="navbar-container">
@@ -15,6 +9,12 @@ import NavbarLinks from './AppNavbar/NavbarLinks.vue'
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import LanguageSelector from './AppNavbar/LanguageSelector.vue'
+import NavbarBrand from './AppNavbar/NavbarBrand.vue'
+import NavbarLinks from './AppNavbar/NavbarLinks.vue'
+</script>
 
 <style scoped>
 .navbar {
