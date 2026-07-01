@@ -26,7 +26,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub
+        {{ t('projects.repo') }}
       </a>
 
       <a
@@ -35,7 +35,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Live Demo
+        {{ t('projects.demo') }}
       </a>
     </div>
   </article>
