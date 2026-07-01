@@ -52,18 +52,12 @@
 <style scoped>
 .hero-section {
   position: relative;
-
-  min-height: 100vh;
   width: 100%;
-
   display: flex;
-
   padding:
     clamp(5rem, 10vh, 10rem)
     clamp(5vw, 8vw, 12vw);
-
   overflow: hidden;
-
   background:
     radial-gradient(
       circle at top right,
