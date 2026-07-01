@@ -4,31 +4,29 @@
     :title="t('about-me.journey.title')"
   >
     <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-year">2022</span>
-        <p>{{ t('about-me.journey.items["2022"]') }}</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2023</span>
-        <p>{{ t('about-me.journey.items["2023"]') }}</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2024</span>
-        <p>{{ t('about-me.journey.items["2024"]') }}</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">Today</span>
-        <p>{{ t('about-me.journey.items.today') }}</p>
+      <div
+        v-for="item in journeyItems"
+        :key="item.year"
+        class="timeline-item"
+      >
+        <span class="timeline-year">{{ item.year }}</span>
+        <p>{{ item.description }}</p>
       </div>
     </div>
   </SectionBlock>
 </template>
 
 <script setup lang="ts">
+  import { computed } from 'vue'
   import { useI18n } from 'vue-i18n'
   import SectionBlock from './SectionBlock.vue'
   
-  const { t } = useI18n()
+  const { t, tm } = useI18n()
+  
+  const journeyItems = computed(() => tm('about-me.journey.items') as {
+    year: string
+    description: string
+  }[])
 </script>
 
 <style lang="css" scoped>

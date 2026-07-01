@@ -72,11 +72,23 @@ export default {
   journey: {
     label: 'JOURNEY',
     title: 'Career highlights.',
-    items: {
-      '2022': 'Started professional software development.',
-      '2023': 'Worked on healthcare and business platforms.',
-      '2024': 'Expanded into financial systems and frontend engineering.',
-      today: 'Building modern web applications and personal game projects.',
-    },
+    items: [
+      {
+        year: '2022',
+        description: 'Started professional software development.',
+      },
+      {
+        year: '2023',
+        description: 'Worked on healthcare and business platforms.',
+      },
+      {
+        year: '2024',
+        description: 'Expanded into financial systems and frontend engineering.',
+      },
+      {
+        year: 'Today',
+        description: 'Building modern web applications and personal game projects.',
+      },
+    ],
   },
 }

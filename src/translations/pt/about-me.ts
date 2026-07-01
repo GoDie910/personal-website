@@ -72,11 +72,23 @@ export default {
   journey: {
     label: 'JORNADA',
     title: 'Marcos da carreira.',
-    items: {
-      '2022': 'Início do desenvolvimento profissional de software.',
-      '2023': 'Trabalho em plataformas de saúde e negócios.',
-      '2024': 'Expansão para sistemas financeiros e engenharia frontend.',
-      today: 'Construindo aplicações web modernas e projetos pessoais de jogos.',
-    },
+    items: [
+      {
+        year: '2022',
+        description: 'Início do desenvolvimento profissional de software.',
+      },
+      {
+        year: '2023',
+        description: 'Trabalho em plataformas de saúde e negócios.',
+      },
+      {
+        year: '2024',
+        description: 'Expansão para sistemas financeiros e engenharia frontend.',
+      },
+      {
+        year: 'Hoje',
+        description: 'Construindo aplicações web modernas e projetos pessoais de jogos.',
+      },
+    ],
   },
 }

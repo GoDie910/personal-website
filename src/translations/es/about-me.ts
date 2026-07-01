@@ -71,11 +71,24 @@ export default {
   journey: {
     label: 'TRAYECTORIA',
     title: 'Hitos profesionales.',
-    items: {
-      '2022': 'Inicio del desarrollo profesional de software.',
-      '2023': 'Trabajo en plataformas de salud y negocios.',
-      '2024': 'Expansión hacia sistemas financieros e ingeniería frontend.',
-      today: 'Construyendo aplicaciones web modernas y proyectos personales de videojuegos.',
-    },
+    items: [
+      {
+        year: '2022',
+        description: 'Inicio del desarrollo profesional de software.',
+      },
+      {
+        year: '2023',
+        description: 'Trabajo en plataformas de salud y negocios.',
+      },
+      {
+        year: '2024',
+        description: 'Expansión hacia sistemas financieros e ingeniería frontend.',
+      },
+      {
+        year: 'Hoy',
+        description:
+          'Construyendo aplicaciones web modernas y proyectos personales de videojuegos.',
+      },
+    ],
   },
 }
