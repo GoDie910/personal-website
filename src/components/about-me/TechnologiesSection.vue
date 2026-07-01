@@ -33,9 +33,9 @@
     </div>
 
     <p class="tech-footer">
-      {{ t('about-me.technologies.footer') }}
+      {{ t('about-me.technologies.footer.text') }}
       <RouterLink to="/#skills-section">
-        Skills section on the home page
+        {{ t('about-me.technologies.footer.link') }}
       </RouterLink>
     </p>
   </SectionBlock>

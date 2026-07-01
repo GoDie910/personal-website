@@ -39,8 +39,10 @@ export default {
   technologies: {
     label: 'TECNOLOGIAS',
     title: 'Tecnologias principais.',
-    footer:
-      'Para ver o detalhamento completo de tecnologias, ferramentas e áreas, explore a seção Skills na página inicial',
+    footer: {
+      text: 'Para ver o detalhamento completo de tecnologias, ferramentas e áreas, explore a seção Skills na página inicial',
+      link: 'Seção de habilidades na página inicial',
+    },
   },
   interests: {
     label: 'INTERESSES',

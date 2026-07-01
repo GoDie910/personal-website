@@ -39,8 +39,10 @@ export default {
   technologies: {
     label: 'TECNOLOGÍAS',
     title: 'Tecnologías principales.',
-    footer:
-      'Para ver el desglose completo de tecnologías, herramientas y áreas, explora la sección Skills en la página principal',
+    footer: {
+      text: 'Para ver el desglose completo de tecnologías, herramientas y áreas, explora la sección Skills en la página principal',
+      link: 'Sección de habilidades en la página de inicio',
+    },
   },
   interests: {
     label: 'INTERESES',

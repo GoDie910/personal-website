@@ -38,8 +38,10 @@ export default {
   technologies: {
     label: 'TECHNOLOGIES',
     title: 'Core technologies.',
-    footer:
-      'For a complete breakdown of technologies, tools, and domains, explore the Skills section on the home page',
+    footer: {
+      text: 'For a complete breakdown of technologies, tools, and domains, explore the Skills section on the home page',
+      link: 'Skills section on the home page',
+    },
   },
   interests: {
     label: 'INTERESTS',
